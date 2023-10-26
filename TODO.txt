@@ -7,3 +7,4 @@ Inbox no conversation text and icon color
 Custom menu items
 Custom background
 Custom styles
+Dashboard view menu icon color
