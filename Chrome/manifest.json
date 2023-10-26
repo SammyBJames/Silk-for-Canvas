@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "Silk",
+  "version": "2.4",
+  "description": "Clean up Canvas pages and make your experience as smooth as Silk.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_icon": "icons/icon-128.png",
+    "default_title": "Silk",
+    "default_popup": "popups/menu.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instructure.com/*"],
+      "exclude_matches": ["*://www.instructure.com/*"],
+      "css": ["styles/fonts.css", "styles/page.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.instructure.com/*"],
+      "exclude_matches": ["*://www.instructure.com/*"],
+      "js": ["scripts/favicon.js", "scripts/page.js"]
+    },
+    {
+      "matches": ["*://*.instructure.com/"],
+      "exclude_matches": ["*://www.instructure.com/"],
+      "css": ["styles/dashboard.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.instructure.com/"],
+      "exclude_matches": ["*://www.instructure.com/"],
+      "js": ["scripts/dashboard.js"]
+    },
+    {
+      "matches": ["*://*.instructure.com/conversations"],
+      "css": ["styles/inbox.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.instructure.com/grades"],
+      "css": ["styles/grades.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.instructure.com/courses/*"],
+      "css": ["styles/course.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://*.instructure.com/courses/*"],
+      "js": ["scripts/course.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon.svg"],
+      "matches": ["*://*.instructure.com/*"]
+    }
+  ]
+}

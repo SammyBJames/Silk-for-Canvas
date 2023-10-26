@@ -1,0 +1,166 @@
+/* Variables */
+:root {
+    --silk-gradient: linear-gradient(120deg, rgba(16,177,231,1) 0%, rgba(88,82,163,1) 50%, rgba(183,47,43,1) 100%);
+}
+
+/* Popup body */
+body {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Gabarito";
+    background-color: #252525;
+    color: #ffffff;
+    padding-bottom: 8px;
+    min-width: 335px;
+}
+
+/* Hide Chrome scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Settings blocks */
+h1 {
+    margin: 0px;
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    font-weight: 800;
+    font-size: 32px;
+    background: var(--silk-gradient);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 16px;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ffffff; 
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Accent input */
+.accent-input {
+    display: flex;
+    align-items: center;
+}
+
+#accent-box {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid #ffffff;
+    font-family: "Gabarito";
+    font-size: 16px;
+    color: #ffffff;
+    width: 70px;
+    transition: 0.1s;
+    margin-right: 4px;
+}
+
+#accent-box:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+img {
+    color: #ffffff;
+    width: 14px;
+    height: 14px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+
+/* Toggles */
+label {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 28px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    top: 2px;
+    left: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+}
+
+/* Round sliders */
+.slider {
+    border-radius: 34px;
+}
+
+.slider:before {
+    border-radius: 50%;
+}
