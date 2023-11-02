@@ -36,6 +36,50 @@ async function add_dashboard_option() {
 }
 
 
+async function add_custom_menu_options() {
+    let custom_items = await browser.storage.local.get();
+    custom_items = custom_items.custom_menu_items;
+    if (custom_items == null) custom_items = [];
+    custom_items = [
+        {
+            name: "Banner",
+            href: "https://ss.banner.usu.edu/BannerExtensibility/customPage/page/HOMEPAGE",
+            icon: browser.runtime.getURL("icons/banner.svg")
+        }
+    ]
+    // Don't create elements if they already exists (extension reload)
+    if (document.getElementById(`silk-custom-0-item`) != null) return;
+    for (let i = 0; i < custom_items.length; i++) {
+        let item = custom_items[i];
+        // Menu list item
+        let menu_item = document.createElement("li");
+        menu_item.className = "menu-item ic-app-header__menu-list-item";
+        menu_item.id = `silk-custom-${i}-item`;
+        // Link
+        let link = document.createElement("a");
+        link.className = "ic-app-header__menu-list-link";
+        link.role = "button";
+        link.href = item.href;
+        link.target = "_blank";
+        menu_item.appendChild(link)
+        // Logo image
+        let logo = document.createElement("img");
+        logo.src = item.icon;
+        logo.style.width = "26px";
+        logo.style.height = "26px";
+        link.appendChild(logo);
+        // Tooltip
+        let tooltip = document.createElement("div");
+        tooltip.className = "menu-item__text";
+        tooltip.innerText = item.name;
+        link.appendChild(tooltip);
+        // Append to menu
+        let menu = document.getElementById("menu");
+        menu.appendChild(menu_item);
+    }
+}
+
+
 function get_menu_options() {
     let items = document.getElementsByClassName("ic-app-header__menu-list-item");
     let items_list = {};
@@ -60,6 +104,7 @@ function get_menu_options() {
 async function customize_page() {
     set_accent_color();
     add_dashboard_option();
+    add_custom_menu_options();
     // Retrieve course ID settings from storage
     let settings = await browser.storage.local.get();
     settings = settings.dashboard;

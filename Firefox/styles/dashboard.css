@@ -31,32 +31,32 @@ body {
     background: #252525 !important;
     border-radius: 50% !important;
     z-index: 110 !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
     overflow: hidden !important;
 }
 
 /* Button icon */
-.cGqzL_bGBk[name="IconMore"] {
+#DashboardOptionsMenu_Container .css-1uh2md0-inlineSVG-svgIcon {
     fill: #ffffff !important;
 }
 
 /* Menu background */
-.dqmEK_caGd {
+.css-dvua1q-view--block-contextView__content {
     border-radius: 16px !important;
     border-width: 0px !important;
     padding: 8px !important;
     background: #ffffff !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Menu buttons */
-.sJGfW_bGBk {
+.css-1fbnyb-menuItem {
     border-radius: 12px !important;
     margin-bottom: 4px;
 }
 
 /* Menu buttons background */
-.sJGfW_bGBk.sJGfW_cSen, .sJGfW_bGBk:active, .sJGfW_bGBk:focus, .sJGfW_bGBk:hover, .sJGfW_bGBk[aria-expanded="true"] {
+.css-1fbnyb-menuItem.css-1d91lml-menuItem__icon, .css-1fbnyb-menuItem:active, .css-1fbnyb-menuItem:focus, .css-1fbnyb-menuItem:hover, .css-1fbnyb-menuItem[aria-expanded="true"] {
     background: var(--silk-gradient) !important;
 }
 
@@ -66,12 +66,12 @@ body {
 }
 
 /* Hide menu arrow */
-.dqmEK_ftdy {
+.css-10kzij6-contextView__arrow {
     display: none !important;
 }
 
 /* Remove menu border on click */
-.cAqHo_eAjd::before {
+.css-1dndbkc-menu::before {
     border-width: 0px !important;
 }
 /* <=== Dashboard View Menu ===> */
@@ -82,7 +82,7 @@ body {
     border-radius: 16px !important;
     transition: 0.2s !important;
     font-family: "Gabarito" !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Scale cards on hover */
@@ -122,7 +122,7 @@ body {
 .planner-day, .planner-empty-days {
     padding: 16px !important;
     border-radius: 16px !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Planner event corners */
@@ -144,7 +144,7 @@ body {
     padding: 16px !important;
     border-radius: 16px !important;
     background: #ffffff !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Activity header */
@@ -168,7 +168,7 @@ body {
     border-radius: 16px !important;
     margin: 24px !important;
     transition: 0.5s !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Scale sidebar on hover */

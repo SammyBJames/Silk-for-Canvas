@@ -5,8 +5,9 @@ async function load_popup() {
     if (url.hostname.includes(".instructure.com") && url.hostname != "www.instructure.com") {
         // Load sections if applicable
         if (url.pathname.includes("/courses")) load_sections_customization(tab, settings);
-        // Load dashboard settings
+        // Load page settings
         load_nav_customization(tab, settings);
+        load_custom_nav_customization(tab, settings);
         load_accent_customization(tab, settings);
     }
     else {
@@ -43,7 +44,7 @@ function load_nav_customization(tab, settings) {
     }
     load_list("Navigation", nav_items);
     for (const id in settings) {
-        // Add event listener to checkbox that hides or shows the section
+        // Add event listener to checkbox that hides or shows the menu item
         document.getElementById(id).addEventListener("change", () => {
             settings[id].hidden = !settings[id].hidden;
             browser.storage.local.set({ dashboard: settings });
@@ -53,10 +54,37 @@ function load_nav_customization(tab, settings) {
 }
 
 
+function load_custom_nav_customization(tab, settings) {
+    settings = settings.custom_menu_items;
+    if (settings == null) settings = [];
+    let menu_list = [`<span>Name</span><input class="input-box" type="text" value=""><span>Link</span><input class="input-box" type="text" value="">`];
+    for (let i = 0; i < settings.length; i++) {
+        menu_list.unshift(`<span>Name</span><input class="input-box" type="text" value="${settings[i].name}"><span>Link</span><input class="input-box" type="text" value="${settings[i].href}">`);
+    }
+    load_list("Custom Menu Items", menu_list);
+    // let accent_box = document.getElementById("accent-box");
+    // TODO Fix this
+    // let accent_call = () => {
+    //     let val = accent_box.value.trim().toUpperCase();
+    //     console.log(/^[0-9A-F]{6}$/i.test(val));
+    //     if (/^[0-9A-F]{6}$/i.test(val) && val != settings) {
+    //         settings = val;
+    //         browser.storage.local.set({ accent: settings });
+    //         browser.tabs.reload(tab.id);
+    //     }
+    // }
+    // accent_box.addEventListener("keyup", accent_call);
+    // document.getElementById("reset-accent").addEventListener("click", () => {
+    //     accent_box.value = "1F6199"
+    //     accent_call();
+    // });
+}
+
+
 function load_accent_customization(tab, settings) {
     settings = settings.accent;
     if (settings == null) settings = "1F6199";
-    load_list("Accent Color", [`<span>Color</span><div class="accent-input"><span>#</span><input id="accent-box" type="text" value="${settings}"><img id="reset-accent" src="reset.svg"></div>`]);
+    load_list("Accent Color", [`<span>Color</span><div class="accent-input"><span>#</span><input class="input-box" id="accent-box" type="text" value="${settings}"><img id="reset-accent" src="reset.svg"></div>`]);
     let accent_box = document.getElementById("accent-box");
     let accent_call = () => {
         let val = accent_box.value.trim().toUpperCase();

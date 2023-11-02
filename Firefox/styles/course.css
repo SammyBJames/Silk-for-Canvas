@@ -67,28 +67,28 @@
 }
 
 /* Assignments sort buttons */
-.Vmatu_blJt {
+.css-1l8k4me-radioInput__label {
     font-family: "Gabarito" !important;
     text-decoration: none !important;
 }
 
 /* Assignments sort buttons radius */
-.Vmatu_cSXm {
+.css-1s63gha-radioInput__facade {
     border-radius: 12px !important;
 }
 
 /* Hide border on assignments sort buttons */
-.Vmatu_cSXm::before {
+.css-1s63gha-radioInput__facade::before {
     border-width: 0px !important;
 }
 
 /* Cursor pointer on hover assignment sort buttons */
-.Vmatu_bOnW:hover {
+.css-1l8k4me-radioInput__label:hover {
     cursor: pointer !important;
 }
 
 /* Assignments sort buttons background gradient */
-.Vmatu_cjSw.Vmatu_ksNK .Vmatu_cSXm {
+.css-1s63gha-radioInput__facade {
     background: var(--silk-gradient) !important;
 }
 
@@ -114,6 +114,18 @@
     margin-bottom: 16px !important;
 }
 
+/* Assignments submission block */
+#submit_online_upload_form {
+    border-radius: 16px !important;
+    border-top-left-radius: 0px !important;
+    border-width: 1px !important;
+}
+
+/* Assignment submission tabs */
+#submit_assignment_tabs > ul {
+    border-bottom: 0px !important;
+}
+
 /* Assignments upload button */
 .input-file::file-selector-button {
     cursor: pointer;
@@ -125,12 +137,20 @@
     border: 3px solid transparent !important;
     background: linear-gradient(#252525, #252525) padding-box, var(--silk-gradient) border-box !important;
 }
+
+/* Assignments rubric radius */
+.rubric_title {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    padding-left: 10px !important;
+}
+
 /* <===== Pages =====> */
 
 /* <----- Announcements -----> */
 
 /* Announcements search */
-.qBMHb_cSXm {
+.css-1fhttur-textInput__facade {
     border-radius: 12px !important;
 }
 
@@ -144,14 +164,23 @@
 }
 
 /* Grades filters spacing */
-.bNerA_eFno {
+.css-10inoki-formFieldLayout {
     margin-right: 16px !important;
 }
 
 /* Reset grades filter apply button spacing */
-.dJCgj_bGBk {
+.css-s6c3jw-view-flexItem {
     margin-left: 0px !important;
 }
+
+/* Grades filter apply button */
+.css-8fhg4t-baseButton__content {
+    color: #ffffff !important;
+    border: 3px solid transparent !important;
+    background: linear-gradient(#252525, #252525) padding-box, var(--silk-gradient) border-box !important;
+    border-radius: 12px !important;
+}
+
 /* <===== Grades =====> */
 
 
@@ -179,15 +208,17 @@
 }
 
 /* Discussion buttons */
-.fQfxa_caGd.fQfxa_ImeN, [dir="ltr"] .fQfxa_caGd.fQfxa_ImeN, [dir="rtl"] .fQfxa_caGd.fQfxa_ImeN {
+#discussion_settings {
     border-radius: 12px !important;
 }
 
-/* Discussions and Grades search buttons */
-.fQfxa_dqAF.fQfxa_eCSh {
+/* Create discussions button */
+.css-199rk5v-baseButton__content {
     color: #ffffff !important;
     border: 3px solid transparent !important;
     background: linear-gradient(#252525, #252525) padding-box, var(--silk-gradient) border-box !important;
+    border-radius: 12px !important;
+    margin-left: 12px !important;
 }
 
 /* Unread badging (discussions/announcements)*/

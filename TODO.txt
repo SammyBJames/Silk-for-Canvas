@@ -1,10 +1,8 @@
-Restyle success buttons - primary
 Rubrics
-Submission block radius
-Automatically select file when submitting
-Comments box extend icon position
 Inbox no conversation text and icon color
 Custom menu items
 Custom background
 Custom styles
-Dashboard view menu icon color
+Discussion button
+Flyouts
+Menu collapse

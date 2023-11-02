@@ -31,7 +31,7 @@ body {
     background: #252525 !important;
     border-radius: 50% !important;
     z-index: 110 !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
     overflow: hidden !important;
 }
 
@@ -46,7 +46,7 @@ body {
     border-width: 0px !important;
     padding: 8px !important;
     background: #ffffff !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Menu buttons */
@@ -82,7 +82,7 @@ body {
     border-radius: 16px !important;
     transition: 0.2s !important;
     font-family: "Gabarito" !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Scale cards on hover */
@@ -122,7 +122,7 @@ body {
 .planner-day, .planner-empty-days {
     padding: 16px !important;
     border-radius: 16px !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Planner event corners */
@@ -144,7 +144,7 @@ body {
     padding: 16px !important;
     border-radius: 16px !important;
     background: #ffffff !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Activity header */
@@ -168,7 +168,7 @@ body {
     border-radius: 16px !important;
     margin: 24px !important;
     transition: 0.5s !important;
-    box-shadow: var(--fLzZc-boxShadow) !important;
+    box-shadow: var(--default-box-shadow) !important;
 }
 
 /* Scale sidebar on hover */
