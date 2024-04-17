@@ -49,3 +49,55 @@
     background: linear-gradient(white, white) padding-box, var(--silk-gradient) border-box !important;
     padding-top: 4px !important;
 }
+
+/* Set module header border radius */
+.item-group-condensed .ig-header {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+}
+
+/* Set transition for modules */
+.context_module .ig-header {
+    transition: 0.2s !important;
+}
+
+/* Set collapsed module header border radius */
+.item-group-condensed.collapsed_module .ig-header, .ig-header:has(.element_toggler[aria-expanded="false"]) {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+/* Set item list border radius */
+.ig-list > li:last-child > div {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+/* Hide header outline on focus */
+button.element_toggler:focus {
+    box-shadow: none !important;
+}
+
+/* Assignments sort buttons */
+/* .css-1l8k4me-radioInput__label {
+    font-family: "Gabarito" !important;
+    text-decoration: none !important;
+} */
+
+/* Assignments sort buttons radius */
+.css-1s63gha-radioInput__facade {
+    border-radius: 12px !important;
+    background: var(--silk-gradient) !important;
+    text-decoration: none !important;
+}
+
+/* Hide border on assignments sort buttons */
+.css-1s63gha-radioInput__facade::before {
+    border: none !important;
+}
+
+/* Remove underline and show cursor pointer on sort button hover */
+.css-1l8k4me-radioInput__label {
+    text-decoration: none !important;
+    cursor: pointer !important;
+}

@@ -21,6 +21,34 @@ body, body *:not(code, i, kbd, pre, samp, var) {
     background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
 }
 
+/* Round input edges */
+.css-1fhttur-textInput__facade,
+.css-4bk4dw-textInput__facade,
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    border-radius: 12px !important;
+}
+
+/* Round input outline edge */
+.css-4bk4dw-textInput__facade::before {
+    border-radius: 16px !important;
+}
+
 /* Fix alignment on alert banners */
 .eMdva_caGd {
     display: flex !important;

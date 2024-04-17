@@ -1,0 +1,21 @@
+/* Set reply button border rounding */
+.discussion-reply-box {
+    border-radius: 12px !important;
+}
+
+/* Round top corners of OP */
+#discussion-managebar .headerBar {
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+}
+
+/* Round bottom corners of OP */
+#discussion_topic > div:last-child > div, .discussion-entry-reply-area {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+/* Round discussion posts */
+.discussion-entries .entry,.entry .discussion_entry {
+    border-radius: 16px !important;
+}
