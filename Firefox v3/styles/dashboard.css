@@ -1,0 +1,177 @@
+/* Set gradient background */
+body {
+    background: var(--silk-gradient) !important;
+    background-attachment: fixed !important;
+    height: calc(100% - 16px) !important;
+}
+
+/* Stop overflowing height */
+#application, #wrapper {
+    min-height: unset !important;
+}
+
+/* Remove gradient border from global nav and bring it farther onto the page */
+#menu {
+    background: linear-gradient(#252525, #252525) padding-box, linear-gradient(#252525, #252525) border-box !important;
+    margin-top: 16px !important;
+    margin-left: 16px !important;
+}
+
+/* Adjust flyout spacing for new nav position */
+.tray-with-space-for-global-nav {
+    margin-left: 115px !important;
+}
+
+/* Style new flyout */
+.tray-with-space-for-global-nav {
+    margin-top: 28px !important;
+}
+
+/* Fix close button spacing */
+#nav-tray-portal .css-zvg8k4-closeButton {
+    margin-top: 28px !important;
+}
+
+/* Remove header */
+.ic-Dashboard-header__layout {
+    display: none !important;
+}
+
+/* Remove footer */
+#footer {
+    display: none !important;
+}
+
+/* Round card edges */
+.ic-DashboardCard {
+    border-radius: 16px !important;
+    transition: 0.2s !important;
+}
+
+/* Scale cards on hover */
+.ic-DashboardCard:hover {
+    transform: scale(1.03) !important;
+}
+
+/* Make card titles bigger */
+.ic-DashboardCard__header-title {
+    font-size: 24px !important;
+}
+
+/* Remove underline from card titles on hover */
+.ic-DashboardCard__link {
+    text-decoration: none !important;
+}
+
+/* Remove card term subtitles */
+.ic-DashboardCard__header-term {
+    display: none !important;
+}
+
+/* Style planner blocks */
+.planner-day, .planner-empty-days {
+    padding: 16px !important;
+    border-radius: 16px !important;
+    box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Planner event corners */
+.Grouping-styles__overlay {
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+}
+
+/* Planner title corners */
+.Grouping-styles__title {
+    border-top-left-radius: 16px !important;
+}
+
+/* Activity block */
+#dashboard-activity {
+    margin-top: 24px;
+    padding: 16px !important;
+    border-radius: 16px !important;
+    background: white !important;
+    box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Activity header */
+.recent-activity-header {
+    font-weight: bold !important;
+}
+
+/* Sidebar */
+#right-side-wrapper {
+    background: white !important;
+    border-radius: 16px 0px 0px 16px !important;
+    margin: 36px 0px 24px 24px !important;
+    padding-right: 48px !important;
+    box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Remove extra side pane top padding */
+.todo-list-header {
+    margin-top: -8px !important;
+}
+
+/* Adjust pane padding so that it looks good with or without TODOs list */
+.Sidebar__TodoListContainer {
+    padding-bottom: 18px !important;
+}
+
+/* Adjust pane padding so that it looks good with or without TODOs list */
+.recent_feedback {
+    margin-top: -4px !important;
+}
+
+/* Style right pane headers */
+.recent_feedback h2, .todo-list-header {
+    font-size: 24px !important;
+}
+
+/* Style layout menu button */
+#DashboardOptionsMenu_Container {
+    position: fixed !important;
+    bottom: 34px !important;
+    left: 34px !important;
+    background: #252525 !important;
+    border-radius: 50% !important;
+    z-index: 110 !important;
+    box-shadow: var(--default-box-shadow) !important;
+    overflow: hidden !important;
+}
+
+/* Menu button icon */
+#DashboardOptionsMenu_Container .css-1uh2md0-inlineSVG-svgIcon {
+    fill: #ffffff !important;
+}
+
+/* Menu background */
+.css-dvua1q-view--block-contextView__content {
+    border-radius: 16px !important;
+    border-width: 0px !important;
+    padding: 8px !important;
+    background: #ffffff !important;
+    box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Menu buttons */
+.css-1fbnyb-menuItem {
+    border-radius: 12px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Menu buttons background */
+.css-1fbnyb-menuItem.css-1d91lml-menuItem__icon, .css-1fbnyb-menuItem:active, .css-1fbnyb-menuItem:focus, .css-1fbnyb-menuItem:hover, .css-1fbnyb-menuItem[aria-expanded="true"] {
+    background: var(--silk-gradient) !important;
+}
+
+/* Hide menu arrow */
+.css-10kzij6-contextView__arrow {
+    display: none !important;
+}
+
+/* Remove menu border on click */
+.css-1dndbkc-menu::before {
+    border-width: 0 !important;
+}

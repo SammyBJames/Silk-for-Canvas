@@ -1,4 +1,4 @@
-async function add_view_button() {
+async function moveLayoutMenuButton() {
     let header = document.getElementById("dashboard_header_container");
     // Wait for options menu to load
     let add_menu = () => {
@@ -14,4 +14,4 @@ async function add_view_button() {
 }
 
 
-add_view_button();
+moveLayoutMenuButton();

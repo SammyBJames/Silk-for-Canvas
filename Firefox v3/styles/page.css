@@ -1,0 +1,144 @@
+:root {
+    --silk-gradient: linear-gradient(120deg, rgba(16,177,231,1) 0%, rgba(88,82,163,1) 50%, rgba(183,47,43,1) 100%);
+    --default-box-shadow: 4px 8px 12px 0 rgba(0,0,0,.32);
+    --background-color: #252525;
+}
+
+/* Set fonts */
+body, body *:not(code, i, kbd, pre, samp, var) {
+    font-family: Gabarito !important;
+}
+
+/* Round button edges */
+[class*='button'], [class*='Button'], [class*='btn'] {
+    border-radius: 12px !important;
+}
+
+/* Style primary buttons */
+.btn-primary, .Button--primary, .Button--success {
+    color: #ffffff !important;
+    border: 3px solid transparent !important;
+    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+}
+
+/* Fix alignment on alert banners */
+.eMdva_caGd {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Give more room for floating nav */
+body:not(.no-headers) .ic-Layout-wrapper {
+    margin-left: 88px !important;
+}
+
+/* Hide nav background */
+.ic-app-header {
+    background-color: transparent !important;
+    padding: 16px !important;
+    width: unset !important;
+}
+
+/* Set up floating nav */
+#menu {
+    border-radius: 16px !important;
+    padding: 4px !important;
+    background-color: var(--background-color) !important;
+    display: none;
+    flex-direction: column !important;
+    gap: 4px !important;
+    box-shadow: var(--default-box-shadow) !important;
+    border: 4px solid transparent !important;
+    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+}
+
+/* Round nav items */
+.ic-app-header__menu-list-item > a {
+    border-radius: 12px !important;
+}
+
+/* Remove border from avatar and adjust size */
+.ic-avatar {
+    border: 0px !important;
+    height: 32px !important;
+    width: 32px !important;
+}
+
+/* Remove unnecessary elements from navigation */
+#eesy-tab-custom-inner,
+#primaryNavToggle,
+.ic-app-header__logomark-container,
+.ic-app-header__secondary-navigation {
+    display: none !important;
+}
+
+/* Adjust menu tooltips */
+.menu-item__text {
+    font-size: 16px !important;
+    background: white !important;
+    color: var(--background-color) !important;
+    margin-left: 8px !important;
+    box-shadow: var(--default-box-shadow) !important;
+    border-radius: 12px !important;
+}
+
+/* Hide tooltip arrow */
+.menu-item__text::after {
+    display: none !important;
+}
+
+/* Fix flyout spacing */
+.tray-with-space-for-global-nav {
+    margin-left: 105px !important;
+}
+
+/* Allow flyout to shrink */
+.fLzZc_caGd, .navigation-tray-container {
+    min-height: unset !important;
+}
+
+/* Make old flyout transparent */
+#nav-tray-portal .css-1gto5tw-tray {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+/* Style new flyout */
+.tray-with-space-for-global-nav {
+    background-color: white !important;
+    border-radius: 16px !important;
+    margin-top: 16px !important;
+    box-shadow: var(--default-box-shadow) !important;
+    border: 4px solid transparent !important;
+    background: linear-gradient(white, white) padding-box, var(--silk-gradient) border-box !important;
+}
+
+/* Fix close button spacing */
+#nav-tray-portal .css-zvg8k4-closeButton {
+    margin-top: 16px !important;
+}
+
+/* Hide border on close button focus */
+.css-zvg8k4-closeButton > .css-12ubgg3-view--inlineBlock-baseButton::before {
+    border: none !important;
+}
+
+/* Style profile image */
+.tray-with-space-for-global-nav .css-1y3uyex-view--block-avatar {
+    width: 100px !important;
+    height: 100px !important;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+/* Style flyout headers */
+.tray-with-space-for-global-nav .css-cv5a3j-view-heading {
+    font-size: 28px !important;
+    font-weight: 800 !important;
+}
+
+/* Hide TODOs */
+.Sidebar__TodoListContainer {
+    display: none;
+}

@@ -1,0 +1,51 @@
+/* Style right pane headers */
+.recent_feedback h2, .todo-list-header {
+    font-size: 24px !important;
+}
+
+/* Remove term subtitle */
+#section-tabs-header-subtitle {
+    display: none !important;
+}
+
+/* Hide sections */
+.section {
+    display: none;
+}
+
+/* Fix alignment of menu icon and breadcrumbs */
+#courseMenuToggle {
+    margin-bottom: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Prevent unnecessary breadcrumb wrapping */
+#breadcrumbs > ul {
+    display: flex !important;
+}
+
+/* Fix alignment on breadcrumbs */
+#breadcrumbs > ul > li {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Allow longer breadcrumbs */
+#breadcrumbs .ellipsible {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    max-width: 300px !important;
+}
+
+/* Allow last breadcrumb to be as large as the content */
+#breadcrumbs li:last-child, #breadcrumbs li:last-child .ellipsible {
+    max-width: unset !important;
+}
+
+/* Gradient breadcrumbs underline */
+.ic-app-nav-toggle-and-crumbs {
+    border-radius: 4px !important;
+    border-bottom: 4px solid transparent !important;
+    background: linear-gradient(white, white) padding-box, var(--silk-gradient) border-box !important;
+    padding-top: 4px !important;
+}

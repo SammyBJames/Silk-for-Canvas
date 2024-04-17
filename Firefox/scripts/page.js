@@ -8,7 +8,7 @@ async function set_accent_color() {
 }
 
 
-async function add_dashboard_option() {
+async function addSilkLogo() {
     // Don't create if already exists (extension reload)
     if (document.getElementById("silk-dashboard-link") != null) return;
     // Menu list item
@@ -80,7 +80,7 @@ async function add_custom_menu_options() {
 }
 
 
-function get_menu_options() {
+function updateAvailableSections() {
     let items = document.getElementsByClassName("ic-app-header__menu-list-item");
     let items_list = {};
     for (let i = 0; i < items.length; i++) {
@@ -103,12 +103,12 @@ function get_menu_options() {
 
 async function customize_page() {
     set_accent_color();
-    add_dashboard_option();
+    addSilkLogo();
     add_custom_menu_options();
     // Retrieve course ID settings from storage
     let settings = await browser.storage.local.get();
     settings = settings.dashboard;
-    let items = get_menu_options();
+    let items = updateAvailableSections();
     if (settings == null) settings = items;
     // Check section consistency
     for (const id in items) {
