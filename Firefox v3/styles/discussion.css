@@ -19,3 +19,9 @@
 .discussion-entries .entry,.entry .discussion_entry {
     border-radius: 16px !important;
 }
+
+/* Fix discussion header */
+h1 {
+    font-size: 26px !important;
+    font-weight: 800 !important;
+}

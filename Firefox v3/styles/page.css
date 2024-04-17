@@ -14,8 +14,13 @@ body, body *:not(code, i, kbd, pre, samp, var) {
     border-radius: 12px !important;
 }
 
+/* Round button outline edges */
+.css-7zwwjz-view--inlineBlock-baseButton::before {
+    border-radius: 16px !important;
+}
+
 /* Style primary buttons */
-.btn-primary, .Button--primary, .Button--success {
+.btn-primary, .Button--primary, .Button--success, .btn-success {
     color: #ffffff !important;
     border: 3px solid transparent !important;
     background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;

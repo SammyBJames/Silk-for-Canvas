@@ -60,8 +60,23 @@
         "run_at": "document_end"
       },
       {
+        "matches": ["*://*.instructure.com/courses/*/assignments/*"],
+        "css": ["styles/content.css"],
+        "run_at": "document_start"
+      },
+      {
         "matches": ["*://*.instructure.com/courses/*/discussion_topics/*"],
         "css": ["styles/discussion.css"],
+        "run_at": "document_start"
+      },
+      {
+        "matches": ["*://*.instructure.com/courses/*/quizzes/*"],
+        "css": ["styles/quiz.css"],
+        "run_at": "document_start"
+      },
+      {
+        "matches": ["*://*.instructure.com/courses/*/grades"],
+        "css": ["styles/grades.css"],
         "run_at": "document_start"
       },
       {

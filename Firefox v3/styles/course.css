@@ -31,7 +31,7 @@
 }
 
 /* Allow longer breadcrumbs */
-#breadcrumbs .ellipsible {
+#breadcrumbs .ellipsible, #breadcrumbs .ellipsis {
     font-size: 24px !important;
     font-weight: 700 !important;
     max-width: 300px !important;
@@ -78,12 +78,6 @@ button.element_toggler:focus {
     box-shadow: none !important;
 }
 
-/* Assignments sort buttons */
-/* .css-1l8k4me-radioInput__label {
-    font-family: "Gabarito" !important;
-    text-decoration: none !important;
-} */
-
 /* Assignments sort buttons radius */
 .css-1s63gha-radioInput__facade {
     border-radius: 12px !important;
@@ -100,4 +94,10 @@ button.element_toggler:focus {
 .css-1l8k4me-radioInput__label {
     text-decoration: none !important;
     cursor: pointer !important;
+}
+
+/* Search button spacing */
+.ef-search-form > .Button {
+    margin-left: 8px !important;
+    border-left: 1px solid #c7cdd1 !important;
 }
