@@ -33,7 +33,7 @@ async function addSilkLogo() {
 function collapseNav() {
     const navToggle = document.getElementById('primaryNavToggle');
     // Have to wait to collapse as event listener is added via scripts
-    if (navToggle.ariaLabel === 'Minimize global navigation') setTimeout(() => navToggle.click(), 2000);
+    if (navToggle.ariaLabel === 'Minimize global navigation') setTimeout(() => navToggle.click(), 3000);
 }
 
 function updateAvailableNav() {
