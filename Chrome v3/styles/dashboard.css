@@ -32,8 +32,33 @@ body {
     margin-top: 28px !important;
 }
 
-/* Remove header */
+/* Style header as planner layout controls */
 .ic-Dashboard-header__layout {
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    padding-left: 16px !important;
+    background-color: white !important;
+    box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Hide header */
+#dashboard_header_container {
+    display: none !important;
+}
+
+/* Reveal header on planner view */
+#dashboard_header_container:has(~ #dashboard-planner[style*="block"]) {
+    display: block !important;
+}
+
+/* Position header to the right */
+#dashboard_header_container {
+    position: fixed !important;
+    right: 24px !important;
+}
+
+/* Hide header caption */
+.ic-Dashboard-header__layout .css-pljkwv-view-heading {
     display: none !important;
 }
 
@@ -68,11 +93,59 @@ body {
     display: none !important;
 }
 
-/* Style planner blocks */
-.planner-day, .planner-empty-days {
-    padding: 16px !important;
-    border-radius: 16px !important;
+/* Style planner header */
+.PlannerHeader {
+    background: none !important;
+}
+
+/* Hide border on planner menu close button focus */
+.css-19r6qv1-closeButton > .css-12ubgg3-view--inlineBlock-baseButton::before {
+    border: none !important;
+}
+
+/* Adjust planner new activity button */
+#new_activity_button {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
     box-shadow: var(--default-box-shadow) !important;
+    background: var(--silk-gradient) !important;
+}
+
+.ic-Dashboard-header__layout:has(#new_activity_button) {
+    border-bottom-right-radius: 0px !important;
+}
+
+/* Remove planner activity button border on focus */
+#new_activity_button::before {
+    border: none !important;
+}
+
+/* Remove planner blocks background */
+.planner-day, .planner-empty-days {
+    background: none !important;
+}
+
+/* Style planner items */
+.Grouping-styles__items {
+    background-color: white !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    padding-right: 8px !important;
+}
+
+/* Round planner hero images */
+.Grouping-styles__hero {
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+}
+
+/* Remove planner item bottom border */
+.CompletedItemsFacade-styles__root {
+    border-bottom: none !important;
+}
+
+.Grouping-styles__items > li:last-child > .planner-item {
+    border-bottom: none !important;
 }
 
 /* Planner event corners */
@@ -86,9 +159,24 @@ body {
     border-top-left-radius: 16px !important;
 }
 
+/* Planner section text color */
+.css-tz46fa-view-heading, .css-1ns2r3i-view-heading, .css-1lfaow5-view--block {
+    color: white !important;
+}
+
 /* Planner loading, done text color */
 .css-zlfjpm-text {
     color: white !important;
+}
+
+/* End of planner history text color */
+.css-18xzlpb-view, .EmptyDays-styles__nothingPlannedContainer {
+    color: white !important;
+}
+
+/* Style empty day bottom border */
+.planner-empty-days {
+    border-color: #c7cdd1 !important;
 }
 
 /* Activity block */
