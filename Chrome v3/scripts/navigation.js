@@ -16,7 +16,7 @@ async function addSilkLogo() {
 
     // Logo image
     const logo = document.createElement('img');
-    logo.src = browser.runtime.getURL('icons/icon.svg');
+    logo.src = chrome.runtime.getURL('icons/icon.svg');
     logo.style.width = '35px';
     logo.style.height = '35px';
     link.appendChild(logo);
@@ -38,11 +38,11 @@ function updateAvailableNav() {
 
     navItems[0] = 'Silk (Dashboard)';
 
-    browser.storage.local.set({ availableNav: navItems });
+    chrome.storage.local.set({ availableNav: navItems });
 }
 
 async function hideNav() {
-    const settings = (await browser.storage.local.get({ hiddenNav: [] })).hiddenNav;
+    const settings = (await chrome.storage.local.get({ hiddenNav: [] })).hiddenNav;
     
     if (settings.includes('Silk (Dashboard)')) document.getElementById('silk-dashboard-link').style.display = 'none';
 

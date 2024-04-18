@@ -1,5 +1,5 @@
 async function customizeTodos() {
-    const setting = (await browser.storage.local.get({ todosHidden: false })).todosHidden;
+    const setting = (await chrome.storage.local.get({ todosHidden: false })).todosHidden;
     // Don't reveal TODOs if they should be hidden
     if (setting) return;
     const style = document.createElement('style');

@@ -23,8 +23,14 @@
       {
         "matches": ["*://*.instructure.com/*"],
         "exclude_matches": ["*://www.instructure.com/*"],
-        "css": ["styles/fonts.css", "styles/page.css"],
-        "js": ["scripts/accent.js"],
+        "css": [
+          "styles/fonts.css",
+          "styles/page.css"
+        ],
+        "js": [
+          "scripts/accent.js",
+          "scripts/todo.js"
+        ],
         "run_at": "document_start"
       },
       {
@@ -32,8 +38,7 @@
         "exclude_matches": ["*://www.instructure.com/*"],
         "js": [
           "scripts/navigation.js",
-          "scripts/favicon.js",
-          "scripts/todo.js"
+          "scripts/favicon.js"
         ],
         "run_at": "document_end"
       },
@@ -50,7 +55,10 @@
         "run_at": "document_end"
       },
       {
-        "matches": ["*://*.instructure.com/courses/*"],
+        "matches": [
+          "*://*.instructure.com/courses/*",
+          "*://*.instructure.com/grades"
+        ],
         "css": ["styles/course.css"],
         "run_at": "document_start"
       },
@@ -61,11 +69,14 @@
       },
       {
         "matches": ["*://*.instructure.com/courses/*/assignments/*"],
-        "css": ["styles/content.css"],
+        "css": ["styles/assignment.css"],
         "run_at": "document_start"
       },
       {
-        "matches": ["*://*.instructure.com/courses/*/discussion_topics/*"],
+        "matches": [
+          "*://*.instructure.com/courses/*/discussion_topics",
+          "*://*.instructure.com/courses/*/discussion_topics/*"
+        ],
         "css": ["styles/discussion.css"],
         "run_at": "document_start"
       },
@@ -75,18 +86,8 @@
         "run_at": "document_start"
       },
       {
-        "matches": ["*://*.instructure.com/courses/*/grades"],
-        "css": ["styles/grades.css"],
-        "run_at": "document_start"
-      },
-      {
         "matches": ["*://*.instructure.com/conversations"],
         "css": ["styles/inbox.css"],
-        "run_at": "document_start"
-      },
-      {
-        "matches": ["*://*.instructure.com/grades"],
-        "css": ["styles/grades.css"],
         "run_at": "document_start"
       }
     ],
