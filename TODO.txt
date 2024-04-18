@@ -1,5 +1,2 @@
-- Add dashboard header in planner view
-    - Activity badge and border radii
-- Image rounding in planner view
 - Fix accent picker issues in Chrome
 - Improve nav menu collapse
