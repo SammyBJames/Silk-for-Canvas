@@ -47,7 +47,7 @@ body {
 }
 
 /* Reveal header on planner view */
-#dashboard_header_container:has(~ #dashboard-planner[style="display: block;"]) {
+#dashboard_header_container:has(~ #dashboard-planner[style*="block"]) {
     display: block !important;
 }
 
@@ -176,7 +176,7 @@ body {
 
 /* Style empty day bottom border */
 .planner-empty-days {
-    border-color: white !important;
+    border-color: #c7cdd1 !important;
 }
 
 /* Activity block */
