@@ -1,8 +1,5 @@
-Rubrics
-Inbox no conversation text and icon color
-Custom menu items
-Custom background
-Custom styles
-Discussion button
-Flyouts
-Menu collapse
+- Add dashboard header in planner view
+    - Activity badge and border radii
+- Image rounding in planner view
+- Fix accent picker issues in Chrome
+- Improve nav menu collapse

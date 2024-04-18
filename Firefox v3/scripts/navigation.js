@@ -30,6 +30,12 @@ async function addSilkLogo() {
     menu.insertBefore(menuItem, menu.firstChild);
 }
 
+function collapseNav() {
+    const navToggle = document.getElementById('primaryNavToggle');
+    // Have to wait to collapse as event listener is added via scripts
+    if (navToggle.ariaLabel === 'Minimize global navigation') setTimeout(() => navToggle.click(), 2000);
+}
+
 function updateAvailableNav() {
     const items = document.querySelectorAll('.ic-app-header__menu-list-item');
 
@@ -54,6 +60,7 @@ async function hideNav() {
     document.getElementById('menu').style.display = 'flex';
 }
 
+collapseNav();
 addSilkLogo();
 hideNav();
 updateAvailableNav();
