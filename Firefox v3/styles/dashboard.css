@@ -72,6 +72,30 @@ body {
     display: none !important;
 }
 
+/* Fix notification banners background */
+.notification_account_content {
+    background-color: white !important;
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+/* Round notification edges */
+.ic-notification {
+    border-radius: 16px !important;
+    border-color: var(--ic-link-color) !important;
+}
+
+.ic-notification__icon {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+    background: var(--ic-link-color) !important;
+}
+
+.ic-notification__content {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
 /* Round card edges */
 .ic-DashboardCard {
     border-radius: 16px !important;
