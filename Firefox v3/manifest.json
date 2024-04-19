@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Silk for Canvas",
-    "version": "3.1",
+    "version": "3.2",
     "description": "Clean up Canvas pages and make your experience as smooth as Silk.",
     "icons": {
       "16": "icons/icon.svg",
