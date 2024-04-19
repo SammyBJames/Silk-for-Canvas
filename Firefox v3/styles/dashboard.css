@@ -67,6 +67,11 @@ body {
     display: none !important;
 }
 
+/* Remove school logomark */
+.ic-Layout-watermark {
+    display: none !important;
+}
+
 /* Round card edges */
 .ic-DashboardCard {
     border-radius: 16px !important;
