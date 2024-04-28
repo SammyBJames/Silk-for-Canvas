@@ -5,3 +5,4 @@
 - Course sections header in popup
 - PDF preview header
 - Header color
+- Fix dashboard layout menu for other instances
