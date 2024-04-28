@@ -1,2 +1,7 @@
 - Fix accent picker issues in Chrome
 - Improve nav menu collapse
+- Fix grades unread badge text color
+- Set sidebar height to fit content
+- Course sections header in popup
+- PDF preview header
+- Header color
