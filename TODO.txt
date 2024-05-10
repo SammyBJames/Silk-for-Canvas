@@ -6,3 +6,6 @@
 - PDF preview header
 - Header color
 - Fix dashboard layout menu for other instances
+- Set height of dashboard sidebar to fit-height
+- Fix rounding on flash alerts
+- Allow individual hiding of duplicate section items
