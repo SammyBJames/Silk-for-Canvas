@@ -70,7 +70,7 @@ async function loadSectionsCustomization(tab) {
         sectionToggles.push([label]);
     }
 
-    loadSection('Navigation', sectionToggles);
+    loadSection('Course Sections', sectionToggles);
 }
 
 async function loadNavCustomization(tab) {
@@ -174,12 +174,14 @@ async function loadAccentCustomization(tab) {
     inputContainer.appendChild(prefix);
 
     const input = document.createElement('input');
+    input.id = 'accent-box';
     input.className = 'input-box';
     input.type = 'text';
     input.value = setting.accent;
     const updateAccentColor = async () => {
         const newAccent = input.value.trim().toUpperCase();
-        if (/^[0-9A-F]{6}$/i.test(newAccent) && newAccent != setting.accent) {
+        let currentSetting = await chrome.storage.local.get({ accent: '1F6199' });
+        if (/^[0-9A-F]{6}$/i.test(newAccent) && newAccent != currentSetting.accent) {
             await chrome.storage.local.set({ accent: newAccent });
             chrome.tabs.reload(tab.id);
         }
@@ -189,10 +191,10 @@ async function loadAccentCustomization(tab) {
 
     const resetButton = document.createElement('img');
     resetButton.src = 'reset.svg';
-    resetButton.addEventListener('click', () => {
+    resetButton.addEventListener('click', async () => {
         input.value = '1F6199';
-        updateAccentColor();
-    })
+        await updateAccentColor();
+    });
     inputContainer.appendChild(resetButton);
 
     loadSection('Accent Color', [[label, inputContainer]]);

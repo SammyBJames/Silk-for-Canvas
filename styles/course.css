@@ -67,6 +67,11 @@
     border-bottom-right-radius: 16px !important;
 }
 
+/* Fix border on last module color highlight */
+.ig-row {
+    overflow: hidden !important;
+}
+
 /* Set item list border radius */
 .ig-list > li:last-child > div {
     border-bottom-left-radius: 16px !important;
@@ -106,11 +111,20 @@ button.element_toggler:focus {
 h1, #assignment-student-header-content .css-1fqjks6-text {
     font-size: 30px !important;
     font-weight: 800 !important;
-    color: var(--ic-brand-font-color-dark) !important;
 }
 
 h2 {
     font-weight: 800 !important;
+}
+
+/* Fix assignment due date overflow */
+.css-iztub7-view-flexItem {
+    overflow: unset !important;
+}
+
+/* Adjust assignment grade font size */
+.css-q6kura-text {
+    font-size: 22px !important;
 }
 
 /* Adjust unread badging */

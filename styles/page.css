@@ -163,6 +163,11 @@ body:not(.no-headers) .ic-Layout-wrapper {
     overflow: scroll !important;
 }
 
+/* Hide scrollbars on new flyout */
+.css-1dsl5sr-view::-webkit-scrollbar {
+    display: none;
+}
+
 /* Fix close button spacing */
 #nav-tray-portal .css-zvg8k4-closeButton {
     margin-top: 16px !important;
@@ -190,4 +195,46 @@ body:not(.no-headers) .ic-Layout-wrapper {
 /* Hide TODOs */
 .Sidebar__TodoListContainer {
     display: none;
+}
+
+/* Style flash notifications */
+.ic-flash-success {
+    background-color: white !important;
+    border-radius: 16px !important;
+}
+
+/* Round corner of notification icon */
+.ic-flash__icon {
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
+}
+
+/* Set potential flash content to match bubble radius */
+.ic-flash__content {
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+}
+
+/* Fix file preview header height and rounding */
+.ef-file-preview-header {
+    flex: unset !important;
+    height: unset !important;
+}
+
+.ef-file-preview-header-filename {
+    margin-top: 0px !important;
+    border-bottom: 0px !important;
+    height: unset !important;
+    padding-left: 8px !important;
+}
+
+.ef-file-preview-header-buttons {
+    border-radius: 0px !important;
+    border-bottom: 0px !important;
+    height: unset !important;
+}
+
+/* Set mask radius on file preview to remove white corners */
+.css-2lw0on-mask {
+    border-radius: 0px !important;
 }

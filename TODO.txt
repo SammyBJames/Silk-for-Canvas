@@ -1,18 +1,4 @@
-- Fix accent picker issues in Chrome
-  - Outline on selection
-  - Reset button doesn't work
-  - Can't revert to default color
-- Improve nav menu collapse
-- Fix grades unread badge text color
-- Course sections header in popup
-- PDF preview header
-- Header color
-- Fix dashboard layout menu for other instances
-- Set height of dashboard sidebar to fit-height
-- Fix rounding on flash alerts
 - Allow individual hiding of duplicate section items
-- Rounding on corners of unfolded module with no children
-- Fix gradient on menu on dashboard page
-- Due date scrolling on new assignment layout
-- Points available font size on new assignment layout
-- Scrollbars on menu flyouts
+- Fix grades unread badge text color
+- Fix dashboard layout menu for other instances
+- Improve nav menu collapse (last)

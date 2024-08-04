@@ -11,7 +11,7 @@ body {
 }
 
 /* Remove gradient border from global nav and bring it farther onto the page */
-#menu {
+.ic-app-header__main-navigation > #menu {
     background: linear-gradient(#252525, #252525) padding-box, linear-gradient(#252525, #252525) border-box !important;
     margin-top: 16px !important;
     margin-left: 16px !important;
@@ -39,6 +39,11 @@ body {
     padding-left: 16px !important;
     background-color: white !important;
     box-shadow: var(--default-box-shadow) !important;
+}
+
+/* Remove focus outlines on planner controls */
+.PlannerHeader .css-1g86c6s-view--inlineBlock-baseButton::before, .PlannerHeader .css-12ubgg3-view--inlineBlock-baseButton::before {
+    border: none !important;
 }
 
 /* Hide header */
@@ -75,8 +80,8 @@ body {
 /* Fix notification banners background */
 .notification_account_content {
     background-color: white !important;
-    border-top-right-radius: 12px !important;
-    border-bottom-right-radius: 12px !important;
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
 }
 
 /* Round notification edges */
@@ -92,8 +97,8 @@ body {
 }
 
 .ic-notification__content {
-    border-top-right-radius: 12px !important;
-    border-bottom-right-radius: 12px !important;
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
 }
 
 /* Round card edges */
@@ -200,6 +205,15 @@ body {
 
 /* End of planner history text color */
 .css-18xzlpb-view, .EmptyDays-styles__nothingPlannedContainer {
+    color: white !important;
+}
+
+/* Empty planner text color */
+.PlannerEmptyState-styles__subtitle {
+    color: #C0C0C0 !important;
+}
+
+.css-feuh9k-view--block button {
     color: white !important;
 }
 
