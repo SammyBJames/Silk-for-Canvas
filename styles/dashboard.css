@@ -224,6 +224,7 @@ body {
 
 /* Sidebar */
 #right-side-wrapper {
+    height: fit-content !important;
     background: white !important;
     border-radius: 16px 0px 0px 16px !important;
     margin: 36px 0px 24px 24px !important;
