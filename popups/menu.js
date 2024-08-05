@@ -21,7 +21,7 @@ async function loadSectionsCustomization(tab) {
     const query = {};
     query[`available_${courseId}`] = [];
     query[`hidden_${courseId}`] = [];
-    let sections = await chrome.storage.local.get(query);
+    let sections = await chrome.storage.sync.get(query);
 
     // Show results in extension popup
     const itemHeader = document.createElement('span');
@@ -52,12 +52,12 @@ async function loadSectionsCustomization(tab) {
         toggle.addEventListener('change', async () => {
             const query = {};
             query[`hidden_${courseId}`] = [];
-            let hiddenItems = (await chrome.storage.local.get(query))[`hidden_${courseId}`];
+            let hiddenItems = (await chrome.storage.sync.get(query))[`hidden_${courseId}`];
             if (toggle.checked && hiddenItems.includes(item)) hiddenItems = hiddenItems.filter(el => el !== item);
             else if (!toggle.checked && !hiddenItems.includes(item)) hiddenItems.push(item);
             else return;
             query[`hidden_${courseId}`] = hiddenItems;
-            await chrome.storage.local.set(query);
+            await chrome.storage.sync.set(query);
             chrome.tabs.reload(tab.id);
         });
         switchEl.appendChild(toggle);
@@ -74,7 +74,7 @@ async function loadSectionsCustomization(tab) {
 }
 
 async function loadNavCustomization(tab) {
-    let navItems = await chrome.storage.local.get({
+    let navItems = await chrome.storage.sync.get({
         availableNav: [],
         hiddenNav: []
     });
@@ -106,11 +106,11 @@ async function loadNavCustomization(tab) {
         toggle.type = 'checkbox';
         if (!navItems.hiddenNav.includes(item)) toggle.checked = 'true';
         toggle.addEventListener('change', async () => {
-            let hiddenItems = (await chrome.storage.local.get({ hiddenNav: [] })).hiddenNav;
+            let hiddenItems = (await chrome.storage.sync.get({ hiddenNav: [] })).hiddenNav;
             if (toggle.checked && hiddenItems.includes(item)) hiddenItems = hiddenItems.filter(el => el !== item);
             else if (!toggle.checked && !hiddenItems.includes(item)) hiddenItems.push(item);
             else return;
-            await chrome.storage.local.set({ hiddenNav: hiddenItems });
+            await chrome.storage.sync.set({ hiddenNav: hiddenItems });
             chrome.tabs.reload(tab.id);
         });
         switchEl.appendChild(toggle);
@@ -127,7 +127,7 @@ async function loadNavCustomization(tab) {
 }
 
 async function loadTodoCustomization(tab) {
-    let setting = (await chrome.storage.local.get({ todosHidden: false })).todosHidden;
+    let setting = (await chrome.storage.sync.get({ todosHidden: false })).todosHidden;
 
     const label = document.createElement('label');
 
@@ -142,11 +142,11 @@ async function loadTodoCustomization(tab) {
     toggle.type = 'checkbox';
     if (!setting) toggle.checked = 'true';
     toggle.addEventListener('change', async () => {
-        let todosHidden = (await chrome.storage.local.get({ todosHidden: false })).todosHidden;
+        let todosHidden = (await chrome.storage.sync.get({ todosHidden: false })).todosHidden;
         if (toggle.checked && todosHidden) todosHidden = false;
         else if (!toggle.checked && !todosHidden) todosHidden = true;
         else return;
-        await chrome.storage.local.set({ todosHidden: todosHidden });
+        await chrome.storage.sync.set({ todosHidden: todosHidden });
         chrome.tabs.reload(tab.id);
     });
     switchEl.appendChild(toggle);
@@ -161,7 +161,7 @@ async function loadTodoCustomization(tab) {
 }
 
 async function loadAccentCustomization(tab) {
-    let setting = await chrome.storage.local.get({ accent: '1F6199' });
+    let setting = await chrome.storage.sync.get({ accent: '1F6199' });
 
     const label = document.createElement('span');
     label.textContent = 'Color';
@@ -180,9 +180,9 @@ async function loadAccentCustomization(tab) {
     input.value = setting.accent;
     const updateAccentColor = async () => {
         const newAccent = input.value.trim().toUpperCase();
-        let currentSetting = await chrome.storage.local.get({ accent: '1F6199' });
+        let currentSetting = await chrome.storage.sync.get({ accent: '1F6199' });
         if (/^[0-9A-F]{6}$/i.test(newAccent) && newAccent != currentSetting.accent) {
-            await chrome.storage.local.set({ accent: newAccent });
+            await chrome.storage.sync.set({ accent: newAccent });
             chrome.tabs.reload(tab.id);
         }
     }

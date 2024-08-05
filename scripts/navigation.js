@@ -44,11 +44,11 @@ function updateAvailableNav() {
 
     navItems[0] = 'Silk (Dashboard)';
 
-    chrome.storage.local.set({ availableNav: navItems });
+    chrome.storage.sync.set({ availableNav: navItems });
 }
 
 async function hideNav() {
-    const settings = (await chrome.storage.local.get({ hiddenNav: [] })).hiddenNav;
+    const settings = (await chrome.storage.sync.get({ hiddenNav: [] })).hiddenNav;
     
     if (settings.includes('Silk (Dashboard)')) document.getElementById('silk-dashboard-link').style.display = 'none';
 

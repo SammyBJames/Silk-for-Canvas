@@ -6,13 +6,13 @@ function updateAvailableSections(courseId) {
 
     const query = {};
     query[`available_${courseId}`] = sections;
-    chrome.storage.local.set(query);
+    chrome.storage.sync.set(query);
 }
 
 async function hideSections(courseId) {
     const query = {};
     query[`hidden_${courseId}`] = [];
-    const settings = (await chrome.storage.local.get(query))[`hidden_${courseId}`];
+    const settings = (await chrome.storage.sync.get(query))[`hidden_${courseId}`];
     
     const items = document.querySelectorAll('.section');
     items.forEach(el => {
