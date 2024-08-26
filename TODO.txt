@@ -1,4 +1,4 @@
 - Allow individual hiding of duplicate section items
 - Fix grades unread badge text color
-- Fix dashboard layout menu for other instances
+- Fix discussions OP box border radius
 - Improve nav menu collapse (last)
