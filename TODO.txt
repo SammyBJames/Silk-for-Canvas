@@ -1,4 +1,5 @@
 - Allow individual hiding of duplicate section items
 - Fix grades unread badge text color
 - Fix discussions OP box border radius
+- Fix last module item border radius
 - Improve nav menu collapse (last)
