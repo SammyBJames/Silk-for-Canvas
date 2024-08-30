@@ -73,7 +73,7 @@
 }
 
 /* Set item list border radius */
-.ig-list > li:last-child > div {
+.ig-list > li:last-of-type > div {
     border-bottom-left-radius: 16px !important;
     border-bottom-right-radius: 16px !important;
 }
@@ -134,4 +134,9 @@ h2 {
 
 .unread_dot, .new-and-total-badge > .new-items, .nav-badge {
     background: var(--silk-gradient) !important;
+}
+
+/* Fix unread badge text color when on the same page */
+.list-view a.active .nav-badge {
+    color: white !important;
 }

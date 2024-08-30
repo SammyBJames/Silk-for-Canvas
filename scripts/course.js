@@ -1,11 +1,19 @@
 function updateAvailableSections(courseId) {
     const items = document.querySelectorAll('.section');
+    const sections = [];
+    let dedupedSections = [];
 
-    let sections = Array.from(items).map(section => section.firstChild.firstChild.textContent.trim());
-    sections = sections.filter(section => section !== '');
+    for (const item of Array.from(items)) {
+        let sectionName, newSectionName;
+        sectionName = newSectionName = item.firstChild.firstChild.textContent.trim();
+        if (sections.includes(sectionName)) newSectionName = `${sectionName} (Copy ${sections.filter(secName => secName === sectionName).length})`;
+        sections.push(sectionName);
+        dedupedSections.push(newSectionName);
+    }
+    dedupedSections = dedupedSections.filter(section => section !== '');
 
     const query = {};
-    query[`available_${courseId}`] = sections;
+    query[`available_${courseId}`] = dedupedSections;
     chrome.storage.sync.set(query);
 }
 
@@ -14,9 +22,14 @@ async function hideSections(courseId) {
     query[`hidden_${courseId}`] = [];
     const settings = (await chrome.storage.sync.get(query))[`hidden_${courseId}`];
     
+    const processed = [];
     const items = document.querySelectorAll('.section');
     items.forEach(el => {
-        if (!settings.includes(el.firstChild.firstChild.textContent.trim())) el.style.display = 'block';
+        let sectionName, newSectionName;
+        sectionName = newSectionName = el.firstChild.firstChild.textContent.trim();
+        if (processed.includes(sectionName)) newSectionName = `${sectionName} (Copy ${processed.filter(item => item === sectionName).length})`;
+        if (!settings.includes(newSectionName)) el.style.display = 'block';
+        processed.push(sectionName);
     });
 }
 

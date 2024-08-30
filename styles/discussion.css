@@ -16,7 +16,7 @@
 }
 
 /* Round discussion posts and adjust top spacing */
-.discussion-entries .entry,.entry .discussion_entry {
+.discussion-entries .entry,.entry .discussion_entry, .css-h20mns-view--flex-flex .css-1vqfmz1-view {
     border-radius: 16px !important;
     padding-top: 0px !important;
 }
