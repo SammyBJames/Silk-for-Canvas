@@ -46,7 +46,7 @@
 .ic-app-nav-toggle-and-crumbs {
     border-radius: 4px !important;
     border-bottom: 4px solid transparent !important;
-    background: linear-gradient(white, white) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--white-gradient) padding-box, var(--silk-gradient) border-box !important;
     padding-top: 4px !important;
 }
 
@@ -129,7 +129,7 @@ h2 {
 
 /* Adjust unread badging */
 .ic-unread-badge {
-    background: linear-gradient(120deg, rgba(16,177,231,1) 0%, rgba(88,82,163,1) 30%, rgba(183,47,43,1) 60%, rgba(183,47,43,1) 100%) !important;
+    background: var(--silk-gradient-alt) !important;
 }
 
 .unread_dot, .new-and-total-badge > .new-items, .nav-badge {

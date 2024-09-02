@@ -1,7 +1,10 @@
 :root {
-    --silk-gradient: linear-gradient(120deg, rgba(16,177,231,1) 0%, rgba(88,82,163,1) 50%, rgba(183,47,43,1) 100%);
-    --default-box-shadow: 4px 8px 12px 0 rgba(0,0,0,.32);
     --background-color: #252525;
+    --silk-gradient: linear-gradient(120deg, #10B1E7 0%, #5852A3 50%, #B72F2B 100%);
+    --silk-gradient-alt: linear-gradient(120deg, #10B1E7 0%, #5852A3 30%, #B72F2B 60%, #B72F2B 100%);
+    --background-gradient: linear-gradient(var(--background-color), var(--background-color));
+    --white-gradient: linear-gradient(white, white);
+    --default-box-shadow: 4px 8px 12px 0 rgba(0,0,0,.32);
 }
 
 /* Set fonts */
@@ -28,7 +31,7 @@ body, body *:not(code, i, kbd, pre, samp, var) {
 .css-199rk5v-baseButton__content {
     color: #ffffff !important;
     border: 3px solid transparent !important;
-    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
 
 /* Round input edges */
@@ -87,7 +90,7 @@ body:not(.no-headers) .ic-Layout-wrapper {
     gap: 4px !important;
     box-shadow: var(--default-box-shadow) !important;
     border: 4px solid transparent !important;
-    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
     transition: 0.3s;
 }
 
@@ -154,7 +157,7 @@ body:not(.no-headers) .ic-Layout-wrapper {
     margin-top: 16px !important;
     box-shadow: var(--default-box-shadow) !important;
     border: 4px solid transparent !important;
-    background: linear-gradient(white, white) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--white-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
 
 /* Allow flyout scrolling on overflow */

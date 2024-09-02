@@ -45,7 +45,7 @@ h1 {
 /* Create discussions button */
 .css-199rk5v-baseButton__content {
     border: 3px solid transparent !important;
-    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
     margin-right: 8px !important;
 }
 

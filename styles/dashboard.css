@@ -12,7 +12,7 @@ body {
 
 /* Remove gradient border from global nav and bring it farther onto the page */
 .ic-app-header__main-navigation > #menu {
-    background: linear-gradient(#252525, #252525) padding-box, linear-gradient(#252525, #252525) border-box !important;
+    background: var(--background-gradient) padding-box, var(--background-gradient) border-box !important;
     margin-top: 16px !important;
     margin-left: 16px !important;
 }
@@ -275,7 +275,7 @@ body {
 #right-side-wrapper .button-sidebar-wide {
     color: #ffffff !important;
     border: 3px solid transparent !important;
-    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, var(--silk-gradient) border-box !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
 
 /* Style layout menu button */
@@ -283,7 +283,7 @@ body {
     position: fixed !important;
     bottom: 34px !important;
     left: 34px !important;
-    background: #252525 !important;
+    background: var(--background-color) !important;
     border-radius: 50% !important;
     z-index: 110 !important;
     box-shadow: var(--default-box-shadow) !important;

@@ -160,11 +160,9 @@ async function loadTodoCustomization(tab) {
     loadSection('TODOs', [[label]]);
 }
 
-async function loadAccentCustomization(tab) {
-    let setting = await chrome.storage.sync.get({ accent: '1F6199' });
-
+function getColorPicker(name, color, revert, callback) {
     const label = document.createElement('span');
-    label.textContent = 'Color';
+    label.textContent = name;
 
     const inputContainer = document.createElement('div');
     inputContainer.className = 'accent-input';
@@ -177,27 +175,51 @@ async function loadAccentCustomization(tab) {
     input.id = 'accent-box';
     input.className = 'input-box';
     input.type = 'text';
-    input.value = setting.accent;
-    const updateAccentColor = async () => {
-        const newAccent = input.value.trim().toUpperCase();
-        let currentSetting = await chrome.storage.sync.get({ accent: '1F6199' });
-        if (/^[0-9A-F]{6}$/i.test(newAccent) && newAccent != currentSetting.accent) {
-            await chrome.storage.sync.set({ accent: newAccent });
-            chrome.tabs.reload(tab.id);
-        }
+    input.value = color;
+    const updateColor = async () => {
+        const newColor = input.value.trim().toUpperCase();
+        if (/^[0-9A-F]{6}$/i.test(newColor)) callback(newColor);
     }
-    input.addEventListener('input', updateAccentColor);
+    input.addEventListener('input', updateColor);
     inputContainer.appendChild(input);
 
     const resetButton = document.createElement('img');
     resetButton.src = 'reset.svg';
     resetButton.addEventListener('click', async () => {
-        input.value = '1F6199';
-        await updateAccentColor();
+        input.value = revert;
+        await updateColor();
     });
     inputContainer.appendChild(resetButton);
+    return [label, inputContainer];
+}
 
-    loadSection('Accent Color', [[label, inputContainer]]);
+async function loadColorCustomization(tab) {
+    const defaults = {
+        accent: '1F6199',
+        primaryColor1: '10B1E7',
+        primaryColor2: '5852A3',
+        primaryColor3: 'B72F2B',
+        backgroundColor: '252525'
+    };
+    let setting = await chrome.storage.sync.get(defaults);
+
+    const updateColor = async (colorName, defaultColor, color) => {
+        const query = {};
+        query[`${colorName}`] = defaultColor;
+        let currentSetting = await chrome.storage.sync.get(query);
+        if (color != currentSetting[`${colorName}`]) {
+            query[`${colorName}`] = color;
+            await chrome.storage.sync.set(query);
+            chrome.tabs.reload(tab.id);
+        }
+    };
+    const accentInput = getColorPicker('Accent Color', setting.accent, defaults.accent, color => updateColor('accent', defaults.accent, color));
+    const color1Input = getColorPicker('Primary Color 1', setting.primaryColor1, defaults.primaryColor1, color => updateColor('primaryColor1', defaults.primaryColor1, color));
+    const color2Input = getColorPicker('Primary Color 2', setting.primaryColor2, defaults.primaryColor2, color => updateColor('primaryColor2', defaults.primaryColor2, color));
+    const color3Input = getColorPicker('Primary Color 3', setting.primaryColor3, defaults.primaryColor3, color => updateColor('primaryColor3', defaults.primaryColor3, color));
+    const backgroundInput = getColorPicker('Background Color (Menu, Buttons)', setting.backgroundColor, defaults.backgroundColor, color => updateColor('backgroundColor', defaults.backgroundColor, color));
+
+    loadSection('Colors', [accentInput, color1Input, color2Input, color3Input, backgroundInput]);
 }
 
 async function loadPopup() {
@@ -217,7 +239,7 @@ async function loadPopup() {
     // Load TODOs settings
     await loadTodoCustomization(tab);
     // load_custom_nav_customization(tab);
-    await loadAccentCustomization(tab);
+    await loadColorCustomization(tab);
 }
 
 loadPopup();
