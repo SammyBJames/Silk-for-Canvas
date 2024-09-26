@@ -1,0 +1,2 @@
+- Fix navigation menu icon color
+- Fix sidebar positioning
