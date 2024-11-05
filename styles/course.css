@@ -68,8 +68,10 @@
 }
 
 /* Fix border on last module color highlight */
-.ig-row {
-    overflow: hidden !important;
+/* TODO Look for a cleaner way to do that */
+.context_module_item:last-of-type .ig-row::before {
+    height: calc(100% - 5px) !important;
+    border-bottom-left-radius: 100% 20% !important;
 }
 
 /* Set item list border radius */
