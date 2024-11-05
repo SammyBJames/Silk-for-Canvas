@@ -1,10 +1,16 @@
 :root {
-    --background-color: #252525;
+    --background-color: #151515;
+    --foreground-color: #ffffff;
     --silk-gradient: linear-gradient(120deg, #10B1E7 0%, #5852A3 50%, #B72F2B 100%);
     --silk-gradient-alt: linear-gradient(120deg, #10B1E7 0%, #5852A3 30%, #B72F2B 60%, #B72F2B 100%);
     --background-gradient: linear-gradient(var(--background-color), var(--background-color));
     --white-gradient: linear-gradient(white, white);
     --default-box-shadow: 4px 8px 12px 0 rgba(0,0,0,.32);
+}
+
+/* Set default navigation icon color */
+:root {
+    --ic-brand-global-nav-ic-icon-svg-fill: var(--foreground-color) !important;
 }
 
 /* Set fonts */
@@ -29,7 +35,7 @@ body, body *:not(code, i, kbd, pre, samp, var) {
 .btn-success,
 .css-8fhg4t-baseButton__content,
 .css-199rk5v-baseButton__content {
-    color: #ffffff !important;
+    color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }

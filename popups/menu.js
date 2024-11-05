@@ -199,7 +199,8 @@ async function loadColorCustomization(tab) {
         primaryColor1: '10B1E7',
         primaryColor2: '5852A3',
         primaryColor3: 'B72F2B',
-        backgroundColor: '252525'
+        backgroundColor: '151515',
+        foregroundColor: 'FFFFFF'
     };
     let setting = await chrome.storage.sync.get(defaults);
 
@@ -218,8 +219,9 @@ async function loadColorCustomization(tab) {
     const color2Input = getColorPicker('Primary Color 2', setting.primaryColor2, defaults.primaryColor2, color => updateColor('primaryColor2', defaults.primaryColor2, color));
     const color3Input = getColorPicker('Primary Color 3', setting.primaryColor3, defaults.primaryColor3, color => updateColor('primaryColor3', defaults.primaryColor3, color));
     const backgroundInput = getColorPicker('Background Color (Menu, Buttons)', setting.backgroundColor, defaults.backgroundColor, color => updateColor('backgroundColor', defaults.backgroundColor, color));
+    const foregroundInput = getColorPicker('Icon & Text Color (Menu, Buttons)', setting.foregroundColor, defaults.foregroundColor, color => updateColor('foregroundColor', defaults.foregroundColor, color));
 
-    loadSection('Colors', [accentInput, color1Input, color2Input, color3Input, backgroundInput]);
+    loadSection('Colors', [accentInput, color1Input, color2Input, color3Input, backgroundInput, foregroundInput]);
 }
 
 async function loadPopup() {

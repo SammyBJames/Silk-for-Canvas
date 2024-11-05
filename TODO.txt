@@ -1,2 +1,2 @@
-- Fix navigation menu icon color
 - Fix sidebar positioning
+- Fix module item menu overflow hidden

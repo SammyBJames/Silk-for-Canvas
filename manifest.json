@@ -28,7 +28,7 @@
         "styles/page.css"
       ],
       "js": [
-        "scripts/accent.js",
+        "scripts/colors.js",
         "scripts/todo.js"
       ],
       "run_at": "document_start"

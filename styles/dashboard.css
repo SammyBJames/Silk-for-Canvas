@@ -273,7 +273,7 @@ body {
 
 /* Style right pane buttons */
 #right-side-wrapper .button-sidebar-wide {
-    color: #ffffff !important;
+    color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
@@ -292,7 +292,7 @@ body {
 
 /* Menu button icon */
 #DashboardOptionsMenu_Container .css-1uh2md0-inlineSVG-svgIcon {
-    fill: #ffffff !important;
+    fill: var(--foreground-color) !important;
 }
 
 /* Menu background */
