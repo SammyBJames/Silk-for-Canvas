@@ -38,7 +38,9 @@ body, body *:not(code, i, kbd, pre, samp, var) {
 .btn-primary,
 .Button--primary,
 .Button--success,
-.btn-success {
+.btn-success,
+.css-8fhg4t-baseButton__content,
+.css-199rk5v-baseButton__content {
     color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
