@@ -189,7 +189,7 @@ body {
 }
 
 /* Planner section text color */
-.planner-day > div, .planner-day > h2 {
+.planner-day > *, .planner-empty-days > * {
     color: white !important;
 }
 

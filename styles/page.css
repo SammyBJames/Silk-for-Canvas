@@ -71,6 +71,11 @@ input[type="color"],
     border-radius: 16px !important;
 }
 
+/* Unset max-width for wrapper */
+#max-width {
+    max-width: unset !important;
+}
+
 /* Give more room for floating nav */
 body:not(.no-headers) .ic-Layout-wrapper {
     margin-left: 80px !important;
