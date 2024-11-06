@@ -1,6 +1,7 @@
 :root {
     --background-color: #151515;
     --foreground-color: #ffffff;
+    --accent-color: #1F6199;
     --silk-gradient: linear-gradient(120deg, #10B1E7 0%, #5852A3 50%, #B72F2B 100%);
     --silk-gradient-alt: linear-gradient(120deg, #10B1E7 0%, #5852A3 30%, #B72F2B 60%, #B72F2B 100%);
     --background-gradient: linear-gradient(var(--background-color), var(--background-color));
@@ -10,6 +11,10 @@
 
 /* Set default navigation icon color */
 :root {
+    --ic-brand-primary: var(--accent-color) !important;
+    --ic-link-color: var(--accent-color) !important;
+    --ic-link-color-darkened-10: var(--accent-color) !important;
+    --ic-link-color-lightened-10: var(--accent-color) !important;
     --ic-brand-global-nav-ic-icon-svg-fill: var(--foreground-color) !important;
 }
 
@@ -24,25 +29,22 @@ body, body *:not(code, i, kbd, pre, samp, var) {
 }
 
 /* Round button outline edges */
-.css-7zwwjz-view--inlineBlock-baseButton::before {
+*[class$="-baseButton"]::before {
     border-radius: 16px !important;
 }
 
 /* Style primary buttons */
+/* TODO Style missing primary buttons (submit, reply, compose, etc) */
 .btn-primary,
 .Button--primary,
 .Button--success,
-.btn-success,
-.css-8fhg4t-baseButton__content,
-.css-199rk5v-baseButton__content {
+.btn-success {
     color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
 
 /* Round input edges */
-.css-1fhttur-textInput__facade,
-.css-4bk4dw-textInput__facade,
 select,
 textarea,
 input[type="text"],
@@ -59,19 +61,14 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
+*[class$="-textInput__facade"],
 .uneditable-input {
     border-radius: 12px !important;
 }
 
 /* Round input outline edge */
-.css-4bk4dw-textInput__facade::before {
+*[class$="-textInput__facade"]::before {
     border-radius: 16px !important;
-}
-
-/* Fix alignment on alert banners */
-.eMdva_caGd {
-    display: flex !important;
-    align-items: center !important;
 }
 
 /* Give more room for floating nav */
@@ -150,7 +147,8 @@ body:not(.no-headers) .ic-Layout-wrapper {
 }
 
 /* Make old flyout transparent */
-#nav-tray-portal .css-1gto5tw-tray {
+/* TODO Make this more specific */
+#nav-tray-portal > span > span {
     background-color: transparent !important;
     box-shadow: none !important;
     overflow: visible !important;
@@ -167,28 +165,28 @@ body:not(.no-headers) .ic-Layout-wrapper {
 }
 
 /* Allow flyout scrolling on overflow */
-.css-1dsl5sr-view {
+.tray-with-space-for-global-nav > div[class$="-view"] {
     max-height: 90vh !important;
     overflow: scroll !important;
 }
 
 /* Hide scrollbars on new flyout */
-.css-1dsl5sr-view::-webkit-scrollbar {
+.tray-with-space-for-global-nav > div[class$="-view"]::-webkit-scrollbar {
     display: none;
 }
 
 /* Fix close button spacing */
-#nav-tray-portal .css-zvg8k4-closeButton {
+#nav-tray-portal span[class$="-closeButton"] {
     margin-top: 16px !important;
 }
 
-/* Hide border on close button focus */
-.css-zvg8k4-closeButton > .css-12ubgg3-view--inlineBlock-baseButton::before {
+/* Remove focus outline on close buttons */
+span[class$="-closeButton"] > button::before {
     border: none !important;
 }
 
 /* Style profile image */
-.tray-with-space-for-global-nav .css-1y3uyex-view--block-avatar {
+.tray-with-space-for-global-nav span[class$="-view--block-avatar"] {
     width: 100px !important;
     height: 100px !important;
     margin-top: 16px !important;
@@ -196,7 +194,7 @@ body:not(.no-headers) .ic-Layout-wrapper {
 }
 
 /* Style flyout headers */
-.tray-with-space-for-global-nav .css-cv5a3j-view-heading {
+.tray-with-space-for-global-nav h2[class$="-view-heading"] {
     font-size: 28px !important;
     font-weight: 800 !important;
 }
@@ -204,6 +202,11 @@ body:not(.no-headers) .ic-Layout-wrapper {
 /* Hide TODOs */
 .Sidebar__TodoListContainer {
     display: none;
+}
+
+/* Fix TODO link color */
+.ToDoSidebarItem__Title > a {
+    color: var(--ic-link-color) !important;
 }
 
 /* Style flash notifications */
@@ -244,6 +247,6 @@ body:not(.no-headers) .ic-Layout-wrapper {
 }
 
 /* Set mask radius on file preview to remove white corners */
-.css-2lw0on-mask {
+span[class$="-mask"]:has(> .ef-file-preview-overlay) {
     border-radius: 0px !important;
 }

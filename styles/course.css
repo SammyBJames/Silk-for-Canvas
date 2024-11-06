@@ -86,19 +86,19 @@ button.element_toggler:focus {
 }
 
 /* Assignments sort buttons radius */
-.css-1s63gha-radioInput__facade {
+label[for^="show_by_"] > span[class$="-radioInput__facade"] {
     border-radius: 12px !important;
     background: var(--silk-gradient) !important;
     text-decoration: none !important;
 }
 
 /* Hide border on assignments sort buttons */
-.css-1s63gha-radioInput__facade::before {
+label[for^="show_by_"] > span[class$="-radioInput__facade"]::before {
     border: none !important;
 }
 
 /* Remove underline and show cursor pointer on sort button hover */
-.css-1l8k4me-radioInput__label {
+label[for^="show_by_"] > span[class$="-radioInput__label"] {
     text-decoration: none !important;
     cursor: pointer !important;
 }
@@ -110,7 +110,7 @@ button.element_toggler:focus {
 }
 
 /* Adjust header styles */
-h1, #assignment-student-header-content .css-1fqjks6-text {
+h1 {
     font-size: 30px !important;
     font-weight: 800 !important;
 }
@@ -120,12 +120,13 @@ h2 {
 }
 
 /* Fix assignment due date overflow */
-.css-iztub7-view-flexItem {
-    overflow: unset !important;
+span[class$="-view-flexItem"]:has(> div > span[data-testid="assignment-sub-header"])
+{
+    overflow: visible !important;
 }
 
 /* Adjust assignment grade font size */
-.css-q6kura-text {
+span[data-testid="grade-display"] {
     font-size: 22px !important;
 }
 

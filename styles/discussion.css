@@ -16,7 +16,7 @@
 }
 
 /* Round discussion posts and adjust top spacing */
-.discussion-entries .entry,.entry .discussion_entry, .css-h20mns-view--flex-flex .css-1vqfmz1-view {
+.discussion-entries .entry,.entry .discussion_entry, div[data-testid="discussion-topic-container"] > span > div {
     border-radius: 16px !important;
     padding-top: 0px !important;
 }
@@ -43,7 +43,7 @@ h1 {
 }
 
 /* Create discussions button */
-.css-199rk5v-baseButton__content {
+#add_discussion > span {
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
     margin-right: 8px !important;

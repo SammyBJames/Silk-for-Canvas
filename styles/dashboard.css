@@ -28,7 +28,7 @@ body {
 }
 
 /* Fix close button spacing */
-#nav-tray-portal .css-zvg8k4-closeButton {
+#nav-tray-portal span[class$="-closeButton"] {
     margin-top: 28px !important;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 /* Remove focus outlines on planner controls */
-.PlannerHeader .css-1g86c6s-view--inlineBlock-baseButton::before, .PlannerHeader .css-12ubgg3-view--inlineBlock-baseButton::before {
+.PlannerHeader button[class$="-view--inlineBlock-baseButton"]::before {
     border: none !important;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 /* Hide header caption */
-.ic-Dashboard-header__layout .css-pljkwv-view-heading {
+.ic-Dashboard-header__layout span[class$="-view-heading"] {
     display: none !important;
 }
 
@@ -132,11 +132,6 @@ body {
     background: none !important;
 }
 
-/* Hide border on planner menu close button focus */
-.css-19r6qv1-closeButton > .css-12ubgg3-view--inlineBlock-baseButton::before {
-    border: none !important;
-}
-
 /* Adjust planner new activity button */
 #new_activity_button {
     border-top-left-radius: 0px !important;
@@ -194,7 +189,7 @@ body {
 }
 
 /* Planner section text color */
-.css-tz46fa-view-heading, .css-1ns2r3i-view-heading, .css-1lfaow5-view--block {
+.planner-day > div, .planner-day > h2 {
     color: white !important;
 }
 
@@ -256,11 +251,6 @@ body {
     padding-bottom: 18px !important;
 }
 
-/* Fix TODO link color */
-.css-8hpeca-view-link:is(a), .css-8hpeca-view-link:is(button) {
-    color: var(--ic-link-color) !important;
-}
-
 /* Adjust pane padding so that it looks good with or without TODOs list */
 .recent_feedback {
     margin-top: -4px !important;
@@ -291,12 +281,12 @@ body {
 }
 
 /* Menu button icon */
-#DashboardOptionsMenu_Container .css-1uh2md0-inlineSVG-svgIcon {
+#DashboardOptionsMenu_Container svg[class$="-inlineSVG-svgIcon"] {
     fill: var(--foreground-color) !important;
 }
 
 /* Menu background */
-.css-dvua1q-view--block-contextView__content {
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] {
     border-radius: 16px !important;
     border-width: 0px !important;
     padding: 8px !important;
@@ -305,22 +295,24 @@ body {
 }
 
 /* Menu buttons */
-.css-1fbnyb-menuItem {
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] span[class$="-menuItem"] {
     border-radius: 12px !important;
     margin-bottom: 4px !important;
 }
 
 /* Menu buttons background */
-.css-1fbnyb-menuItem.css-1d91lml-menuItem__icon, .css-1fbnyb-menuItem:active, .css-1fbnyb-menuItem:focus, .css-1fbnyb-menuItem:hover, .css-1fbnyb-menuItem[aria-expanded="true"] {
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] span[class$="-menuItem"]:active,
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] span[class$="-menuItem"]:hover,
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] span[class$="-menuItem"]:focus {
     background: var(--silk-gradient) !important;
 }
 
 /* Hide menu arrow */
-.css-10kzij6-contextView__arrow {
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] span[class$="-contextView__arrow"] {
     display: none !important;
 }
 
 /* Remove menu border on click */
-.css-1dndbkc-menu::before {
+body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] ul[class$="-menu"]::before {
     border-width: 0 !important;
 }

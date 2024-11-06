@@ -11,11 +11,11 @@ async function customizeColors() {
     const style = document.createElement('style');
     document.head.appendChild(style);
     const rule = `:root {
-        --ic-link-color: #${setting.accent} !important;
-        --silk-gradient: linear-gradient(120deg, #${setting.primaryColor1} 0%, #${setting.primaryColor2} 50%, #${setting.primaryColor3} 100%) !important;
-        --silk-gradient-alt: linear-gradient(120deg, #${setting.primaryColor1} 0%, #${setting.primaryColor2} 30%, #${setting.primaryColor3} 60%, #${setting.primaryColor3} 100%) !important;
+        --accent-color: #${setting.accent} !important;
         --background-color: #${setting.backgroundColor} !important;
         --foreground-color: #${setting.foregroundColor} !important;
+        --silk-gradient: linear-gradient(120deg, #${setting.primaryColor1} 0%, #${setting.primaryColor2} 50%, #${setting.primaryColor3} 100%) !important;
+        --silk-gradient-alt: linear-gradient(120deg, #${setting.primaryColor1} 0%, #${setting.primaryColor2} 30%, #${setting.primaryColor3} 60%, #${setting.primaryColor3} 100%) !important;
     }`
     style.sheet.insertRule(rule);
 }

@@ -8,10 +8,7 @@
     min-height: unset !important;
 }
 
-.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex.css-nq7u71-view--flex-flex {
-    height: calc(100vh - 1px) !important;
-}
 /* Add border to header */
-.css-wj8vot-view-flexItem {
+#content > div > div > span:not(:last-of-type) {
     border-left: 1px solid #d1cdc7;
 }
