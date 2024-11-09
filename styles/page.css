@@ -19,7 +19,7 @@
 }
 
 /* Set fonts */
-body, body *:not(code, i, kbd, pre, samp, var) {
+body, body *:not(code, code *, i, i *, kbd, kbd *, pre, pre *, samp, samp *, var, var *) {
     font-family: Gabarito !important;
 }
 
