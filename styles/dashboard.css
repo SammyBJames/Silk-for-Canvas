@@ -46,20 +46,16 @@ body {
     border: none !important;
 }
 
-/* Hide header */
+/* Position header to the right and hide */
 #dashboard_header_container {
-    display: none !important;
+    visibility: hidden !important;
+    position: fixed !important;
+    right: 24px !important;
 }
 
 /* Reveal header on planner view */
 #dashboard_header_container:has(~ #dashboard-planner[style*="block"]) {
-    display: block !important;
-}
-
-/* Position header to the right */
-#dashboard_header_container {
-    position: fixed !important;
-    right: 24px !important;
+    visibility: visible !important;
 }
 
 /* Hide header caption */
@@ -226,9 +222,15 @@ body {
     box-shadow: var(--default-box-shadow) !important;
 }
 
+/* Activity header container */
+#dashboard-activity > .page_header_container {
+    margin-bottom: 0px !important;
+}
+
 /* Activity header */
 .recent-activity-header {
     font-weight: bold !important;
+    border: none !important;
 }
 
 /* Sidebar */
@@ -270,6 +272,7 @@ body {
 
 /* Style layout menu button */
 #DashboardOptionsMenu_Container {
+    display: flex !important;
     position: fixed !important;
     bottom: 34px !important;
     left: 34px !important;
@@ -278,6 +281,7 @@ body {
     z-index: 110 !important;
     box-shadow: var(--default-box-shadow) !important;
     overflow: hidden !important;
+    visibility: visible !important;
 }
 
 /* Menu button icon */
