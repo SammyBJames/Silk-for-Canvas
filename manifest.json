@@ -49,12 +49,6 @@
       "run_at": "document_start"
     },
     {
-      "matches": ["*://*.instructure.com/"],
-      "exclude_matches": ["*://www.instructure.com/"],
-      "js": ["scripts/dashboard.js"],
-      "run_at": "document_end"
-    },
-    {
       "matches": [
         "*://*.instructure.com/courses/*",
         "*://*.instructure.com/grades"
