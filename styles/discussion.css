@@ -77,3 +77,11 @@ h1 {
 .replies .entry-content {
     padding-top: 16px !important;
 }
+
+/* Use primary button style for reply and post button */
+.discussion-topic-reply-button *[class$="-baseButton__content"],
+.discussions-editor-submit *[class$="-baseButton__content"] {
+    color: var(--foreground-color) !important;
+    border: 3px solid transparent !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
+}

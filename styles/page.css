@@ -3,7 +3,7 @@
     --foreground-color: #ffffff;
     --accent-color: #1F6199;
     --silk-gradient: linear-gradient(120deg, #10B1E7 0%, #5852A3 50%, #B72F2B 100%);
-    --silk-gradient-alt: linear-gradient(120deg, #10B1E7 0%, #5852A3 30%, #B72F2B 60%, #B72F2B 100%);
+    --silk-gradient-alt: linear-gradient(155deg, #10B1E7 0%, #5852A3 30%, #B72F2B 60%, #B72F2B 100%);
     --background-gradient: linear-gradient(var(--background-color), var(--background-color));
     --white-gradient: linear-gradient(white, white);
     --default-box-shadow: 4px 8px 12px 0 rgba(0,0,0,.32);
@@ -23,24 +23,13 @@ body, body *:not(code, code *, i, i *, kbd, kbd *, pre, pre *, samp, samp *, var
     font-family: Gabarito !important;
 }
 
-/* Round button edges */
-[class*='button'], [class*='Button'], [class*='btn'] {
-    border-radius: 12px !important;
-}
-
-/* Round button outline edges */
-*[class$="-baseButton"]::before {
-    border-radius: 16px !important;
-}
-
 /* Style primary buttons */
 /* TODO Style missing primary buttons (submit, reply, compose, etc) */
 .btn-primary,
 .Button--primary,
 .Button--success,
 .btn-success,
-.css-8fhg4t-baseButton__content,
-.css-199rk5v-baseButton__content {
+#submit-button > span {
     color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
@@ -64,13 +53,74 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 *[class$="-textInput__facade"],
+[class*='button'],
+[class*='Button'],
+[class*='btn'],
 .uneditable-input {
     border-radius: 12px !important;
 }
 
-/* Round input outline edge */
-*[class$="-textInput__facade"]::before {
+/* Round input outline edges */
+*[class$="-baseButton"]::before,
+*[class$="-textInput__facade"]::before,
+*[class$="-textArea__outline"] {
+    border-radius: 15px !important;
+    border-color: var(--accent-color) !important;
+}
+
+/* Remove focus outlines from some buttons */
+*[class$="-baseButton"]:focus {
+    outline: none !important;
+}
+
+/* Round dropdown boxes and float them */
+*[data-position-content^="Popover"] {
+    margin-top: 6px !important;
     border-radius: 16px !important;
+}
+
+/* Round and pad dropdown boxes */
+*[data-position-content^="Popover"] > span > span[class$="-view--block"] {
+    border-radius: 16px !important;
+    padding: 6px !important;
+}
+
+/* Space dropdown lists better */
+*[data-position-content^="Popover"] ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+/* Round dropdown items and add border */
+*[data-position-content^="Popover"] li {
+    border: 1px solid #c7cdd1 !important;
+    border-radius: 12px !important;
+}
+
+/* Shadow gradient on active selection unless hovered */
+*[data-position-content^="Popover"] li > span[aria-selected="true"]:not(:hover) {
+    border-radius: 12px !important;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+/* Highlight active selection */
+*[data-position-content^="Popover"] li:has(span[aria-selected="true"]) {
+    background: var(--silk-gradient-alt);
+    color: white;
+}
+
+/* Give default background to unselected dropdown items */
+*[data-position-content^="Popover"] li:has(span[aria-selected="false"]) {
+    background: white;
+    color: black;
+}
+
+/* Highlight hovered dropdown item */
+*[data-position-content^="Popover"] li:hover {
+    background: var(--silk-gradient-alt) !important;
+    color: white !important;
 }
 
 /* Unset max-width for wrapper */

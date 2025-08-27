@@ -143,3 +143,10 @@ span[data-testid="grade-display"] {
 .list-view a.active .nav-badge {
     color: white !important;
 }
+
+/* Use primary button styling for grades sort menu */
+#apply_select_menus *[class$="-baseButton__content"] {
+    color: var(--foreground-color) !important;
+    border: 3px solid transparent !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
+}

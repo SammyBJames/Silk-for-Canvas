@@ -184,6 +184,11 @@ body {
     border-top-left-radius: 16px !important;
 }
 
+/* Beginning of planner history text color */
+div.PlannerApp {
+    color: white !important;
+}
+
 /* Planner section text color */
 .planner-day > *, .planner-empty-days > * {
     color: white !important;
@@ -282,6 +287,11 @@ body {
     box-shadow: var(--default-box-shadow) !important;
     overflow: hidden !important;
     visibility: visible !important;
+}
+
+/* Style layout menu button */
+#DashboardOptionsMenu_Container button > span{
+    background: var(--background-color) !important;
 }
 
 /* Menu button icon */
