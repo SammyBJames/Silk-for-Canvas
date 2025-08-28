@@ -29,7 +29,8 @@ body, body *:not(code, code *, i, i *, kbd, kbd *, pre, pre *, samp, samp *, var
 .Button--primary,
 .Button--success,
 .btn-success,
-#submit-button > span {
+#submit-button > span,
+#send-message-button > span {
     color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
@@ -74,53 +75,64 @@ input[type="color"],
 }
 
 /* Round dropdown boxes and float them */
-*[data-position-content^="Popover"] {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) {
     margin-top: 6px !important;
     border-radius: 16px !important;
 }
 
 /* Round and pad dropdown boxes */
-*[data-position-content^="Popover"] > span > span[class$="-view--block"] {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) > span > span[class$="-view--block"] {
     border-radius: 16px !important;
     padding: 6px !important;
 }
 
 /* Space dropdown lists better */
-*[data-position-content^="Popover"] ul {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) ul {
     display: flex !important;
     flex-direction: column !important;
     gap: 6px !important;
 }
 
 /* Round dropdown items and add border */
-*[data-position-content^="Popover"] li {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li {
     border: 1px solid #c7cdd1 !important;
     border-radius: 12px !important;
 }
 
 /* Shadow gradient on active selection unless hovered */
-*[data-position-content^="Popover"] li > span[aria-selected="true"]:not(:hover) {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li > span[aria-selected="true"]:not(:hover) {
     border-radius: 12px !important;
     background: rgba(0, 0, 0, 0.25);
     color: white;
 }
 
 /* Highlight active selection */
-*[data-position-content^="Popover"] li:has(span[aria-selected="true"]) {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li:has(span[aria-selected="true"]) {
     background: var(--silk-gradient-alt);
     color: white;
 }
 
 /* Give default background to unselected dropdown items */
-*[data-position-content^="Popover"] li:has(span[aria-selected="false"]) {
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li:has(span[aria-selected="false"]) {
     background: white;
     color: black;
 }
 
-/* Highlight hovered dropdown item */
-*[data-position-content^="Popover"] li:hover {
+/* Highlight hovered dropdown item but not hovered category */
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li:not(:has(*[class$="-options__label"])):hover {
     background: var(--silk-gradient-alt) !important;
     color: white !important;
+}
+
+/* Remove category separator lines */
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) li:has(*[class$="-separator"]) {
+    display: none !important;
+}
+
+/* Add padding to nested lists */
+*[data-position-content^="Popover"]:not(:has(ul[id^="address-book-"])) ul[class$="-view--block-options__list"]:not([id]) {
+    padding: 6px !important;
+    border-radius: 12px !important;
 }
 
 /* Unset max-width for wrapper */
