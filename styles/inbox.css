@@ -12,3 +12,10 @@
 #content > div > div > span:not(:last-of-type) {
     border-left: 1px solid #d1cdc7;
 }
+
+/* Style send message button as primary */
+#send-message-button > span {
+    color: var(--foreground-color) !important;
+    border: 3px solid transparent !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
+}

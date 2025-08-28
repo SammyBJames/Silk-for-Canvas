@@ -150,3 +150,47 @@ span[data-testid="grade-display"] {
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
+
+/* Style overall grade */
+#student-grades-right-content > .final_grade {
+    background: var(--silk-gradient) !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    color: white !important;
+    font-size: 0 !important;
+    margin-bottom: 24px !important;
+    box-shadow: var(--default-box-shadow) !important;
+    padding: 8px !important;
+}
+
+/* Add padding for box without letter grade */
+#student-grades-right-content > .final_grade:not(:has(span.letter_grade)) {
+    padding: 12px 16px !important;
+}
+
+/* Hide non-grade elements */
+#student-grades-right-content > .final_grade > *:not(.grade):not(.letter_grade) {
+    display: none !important;
+}
+
+/* Make grade bigger */
+#student-grades-right-content > .final_grade:has(span.letter_grade) > .grade {
+    font-size: 24px !important;
+    margin-right: -24px !important;
+    max-width: 50% !important;
+    text-align: right !important;
+}
+
+/* Make letter grade bigger */
+#student-grades-right-content > .final_grade:has(span.letter_grade) > .letter_grade {
+    font-size: 48px !important;
+    margin-left: -24px !important;
+}
+
+/* Make grade bigger when letter grade is not present */
+#student-grades-right-content > .final_grade:not(:has(span.letter_grade)) > .grade {
+    font-size: 36px !important;
+}
