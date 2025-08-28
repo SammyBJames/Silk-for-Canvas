@@ -167,17 +167,13 @@ function getColorPicker(name, color, revert, callback) {
     const inputContainer = document.createElement('div');
     inputContainer.className = 'accent-input';
 
-    const prefix = document.createElement('span');
-    prefix.textContent = '#';
-    inputContainer.appendChild(prefix);
-
     const input = document.createElement('input');
     input.id = 'accent-box';
     input.className = 'input-box';
-    input.type = 'text';
-    input.value = color;
+    input.type = 'color';
+    input.value = '#' + color;
     const updateColor = async () => {
-        const newColor = input.value.trim().toUpperCase();
+        const newColor = input.value.toUpperCase().slice(1, input.value.length);
         if (/^[0-9A-F]{6}$/i.test(newColor)) callback(newColor);
     }
     input.addEventListener('input', updateColor);
@@ -186,7 +182,7 @@ function getColorPicker(name, color, revert, callback) {
     const resetButton = document.createElement('img');
     resetButton.src = 'reset.svg';
     resetButton.addEventListener('click', async () => {
-        input.value = revert;
+        input.value = '#' + revert;
         await updateColor();
     });
     inputContainer.appendChild(resetButton);
@@ -215,9 +211,9 @@ async function loadColorCustomization(tab) {
         }
     };
     const accentInput = getColorPicker('Accent Color', setting.accent, defaults.accent, color => updateColor('accent', defaults.accent, color));
-    const color1Input = getColorPicker('Primary Color 1', setting.primaryColor1, defaults.primaryColor1, color => updateColor('primaryColor1', defaults.primaryColor1, color));
-    const color2Input = getColorPicker('Primary Color 2', setting.primaryColor2, defaults.primaryColor2, color => updateColor('primaryColor2', defaults.primaryColor2, color));
-    const color3Input = getColorPicker('Primary Color 3', setting.primaryColor3, defaults.primaryColor3, color => updateColor('primaryColor3', defaults.primaryColor3, color));
+    const color1Input = getColorPicker('Gradient Color 1', setting.primaryColor1, defaults.primaryColor1, color => updateColor('primaryColor1', defaults.primaryColor1, color));
+    const color2Input = getColorPicker('Gradient Color 2', setting.primaryColor2, defaults.primaryColor2, color => updateColor('primaryColor2', defaults.primaryColor2, color));
+    const color3Input = getColorPicker('Gradient Color 3', setting.primaryColor3, defaults.primaryColor3, color => updateColor('primaryColor3', defaults.primaryColor3, color));
     const backgroundInput = getColorPicker('Background Color (Menu, Buttons)', setting.backgroundColor, defaults.backgroundColor, color => updateColor('backgroundColor', defaults.backgroundColor, color));
     const foregroundInput = getColorPicker('Icon & Text Color (Menu, Buttons)', setting.foregroundColor, defaults.foregroundColor, color => updateColor('foregroundColor', defaults.foregroundColor, color));
 

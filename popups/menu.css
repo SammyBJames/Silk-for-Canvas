@@ -80,12 +80,9 @@ h1 {
 }
 
 #accent-box {
-    width: 70px;
-}
-
-#accent-box:focus {
-    outline: none;
-    border-color: #2196F3;
+    width: 76px;
+    height: 32px;
+    border: none;
 }
 
 img {
