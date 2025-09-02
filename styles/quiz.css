@@ -13,3 +13,8 @@
 .form-actions {
     border-radius: 16px !important;
 }
+
+/* Move answer indicators over past rounded corners */
+.answer_indicator {
+    margin-left: 16px !important;
+}
