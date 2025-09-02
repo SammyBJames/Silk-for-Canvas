@@ -330,3 +330,8 @@ body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view
 body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view--block-contextView__content"] ul[class$="-menu"]::before {
     border-width: 0 !important;
 }
+
+/* New activity badge color */
+.NotificationBadge-styles__activityIndicator.NotificationBadge-styles__hasBadge span[class$="-view--inlineBlock-badge"] {
+    background-color: var(--accent-color) !important;
+}
