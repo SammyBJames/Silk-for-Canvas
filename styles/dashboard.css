@@ -218,6 +218,24 @@ div.PlannerApp {
     border-color: #c7cdd1 !important;
 }
 
+/* Set colors of links on planner */
+.Grouping-styles__title,
+*[class$="-toggleDetails__toggle"],
+*[class$="-view-link"] {
+    color: var(--accent-color) !important;
+}
+
+/* Set outline color of focused links on planner */
+*[class$="-toggleDetails__toggle"]:focus,
+*[class$="-view-link"]:focus {
+    outline-color: var(--accent-color) !important;
+}
+
+*[class$="-toggleDetails__toggle"]::before {
+    border-color: var(--accent-color) !important;
+}
+
+
 /* Activity block */
 #dashboard-activity {
     margin-top: 24px;
