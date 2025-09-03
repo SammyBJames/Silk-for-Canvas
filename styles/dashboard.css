@@ -220,17 +220,11 @@ div.PlannerApp {
 
 /* Set colors of links on planner */
 .Grouping-styles__title,
-*[class$="-toggleDetails__toggle"],
-*[class$="-view-link"] {
+*[class$="-toggleDetails__toggle"] {
     color: var(--accent-color) !important;
 }
 
-/* Set outline color of focused links on planner */
-*[class$="-toggleDetails__toggle"]:focus,
-*[class$="-view-link"]:focus {
-    outline-color: var(--accent-color) !important;
-}
-
+/* Set outline color of collapsed links */
 *[class$="-toggleDetails__toggle"]::before {
     border-color: var(--accent-color) !important;
 }
