@@ -50,12 +50,12 @@ function updateAvailableNav() {
 async function hideNav() {
     const settings = (await chrome.storage.sync.get({ hiddenNav: [] })).hiddenNav;
     
-    if (settings.includes('Silk (Dashboard)')) document.getElementById('silk-dashboard-link').style.display = 'none';
-
     const items = document.querySelectorAll('.ic-app-header__menu-list-item');
     items.forEach(el => {
         if (settings.includes(el.textContent.trim())) el.style.display = 'none';
     });
+
+    document.getElementById('silk-dashboard-link').style.display = (settings.includes('Silk (Dashboard)')) ? 'none' : 'list-item';
 
     document.getElementById('menu').style.display = 'flex';
 }
