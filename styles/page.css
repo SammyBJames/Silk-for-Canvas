@@ -28,8 +28,7 @@ body, body *:not(code, code *, i, i *, kbd, kbd *, pre, pre *, samp, samp *, var
 .btn-primary,
 .Button--primary,
 .Button--success,
-.btn-success,
-#submit-button > span {
+.btn-success {
     color: var(--foreground-color) !important;
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;

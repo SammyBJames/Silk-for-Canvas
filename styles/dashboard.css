@@ -344,6 +344,7 @@ body > span > span[class$="-view--inlineBlock-contextView"] > span[class$="-view
 }
 
 /* New activity badge color */
-.NotificationBadge-styles__activityIndicator.NotificationBadge-styles__hasBadge span[class$="-view--inlineBlock-badge"] {
+.NotificationBadge-styles__activityIndicator.NotificationBadge-styles__hasBadge span[class$="-view--inlineBlock-badge"],
+*[class$="-view--inlineBlock-badge__wrapper"] > *[class$="-view--block-badge"] {
     background-color: var(--accent-color) !important;
 }
