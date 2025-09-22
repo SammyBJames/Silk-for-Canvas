@@ -181,7 +181,25 @@ body {
 
 /* Planner title corners */
 .Grouping-styles__title {
-    border-top-left-radius: 16px !important;
+    border-top-left-radius: 15px !important;
+}
+
+/* Fix planner events for narrow windows */
+.Grouping-styles__medium .Grouping-styles__title {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    padding: 8px 12px !important;
+    margin-left: -1px !important;
+}
+
+/* Fix planner event spacing for narrow windows */
+.Grouping-styles__medium .Grouping-styles__hero {
+    margin-top: 12px !important;
+}
+
+/* Fix planner event bottom left border for narrow windows */
+.Grouping-styles__medium .Grouping-styles__items {
+    border-bottom-left-radius: 16px !important;
 }
 
 /* Beginning of planner history text color */
