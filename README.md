@@ -28,6 +28,6 @@ Silk for Canvas enhances your Canvas experience with several key features:
     - Hide TODOs
 - **🗂️ Improved Navigation**: A more intuitive and streamlined navigation experience with a floating navigation menu.
 
-## 🤝 Contributing & Feedback
+## Contributing & Feedback
 
 Found a bug or have an idea for a new feature? Feel free to **open an issue** on this repository! Your feedback is valuable in making the extension better for everyone. Also feel free to fork and make your own version that suits your needs.
