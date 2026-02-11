@@ -1,0 +1,20 @@
+/* Change header to background color */
+.ViewerControls {
+    background-color: var(--background-color) !important;
+}
+
+/* Change annotation control button to be transparent */
+.AnnotationControlButton {
+    background-color: transparent !important;
+}
+
+/* Remove borders from controls */
+.AnnotationControlButton-outer {
+    border: none !important;
+    color: #d0d0d0 !important;
+}
+
+/* Highlight selected control */
+.AnnotationControlButton.selected .AnnotationControlButton-outer {
+    color: #ffffff !important;
+}

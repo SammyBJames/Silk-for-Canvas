@@ -277,6 +277,35 @@ span[class$="-closeButton"] > button::before {
     outline-color: var(--accent-color) !important;
 }
 
+/* Fix alignment of menu icon and breadcrumbs */
+#courseMenuToggle {
+    margin-bottom: 6px !important;
+    box-shadow: none !important;
+}
+
+/* Prevent unnecessary breadcrumb wrapping */
+#breadcrumbs > ul {
+    display: flex !important;
+}
+
+/* Fix alignment on breadcrumbs */
+#breadcrumbs > ul > li {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Allow longer breadcrumbs */
+#breadcrumbs .ellipsible, #breadcrumbs .ellipsis {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    max-width: 300px !important;
+}
+
+/* Allow last breadcrumb to be as large as the content */
+#breadcrumbs li:last-child, #breadcrumbs li:last-child .ellipsible {
+    max-width: unset !important;
+}
+
 /* Hide TODOs */
 .Sidebar__TodoListContainer {
     display: none;
@@ -288,13 +317,13 @@ span[class$="-closeButton"] > button::before {
 }
 
 /* Style flash notifications */
-.ic-flash-success {
+.ic-flash-success, .flashalert-message > div {
     background-color: white !important;
     border-radius: 16px !important;
 }
 
 /* Round corner of notification icon */
-.ic-flash__icon {
+.ic-flash__icon, .flashalert-message > div > div:first-of-type {
     border-top-left-radius: 12px !important;
     border-bottom-left-radius: 12px !important;
 }
@@ -327,4 +356,9 @@ span[class$="-closeButton"] > button::before {
 /* Set mask radius on file preview to remove white corners */
 span[class$="-mask"]:has(> .ef-file-preview-overlay) {
     border-radius: 0px !important;
+}
+
+/* Round corners of file previews */
+div.preview_container iframe {
+    border-radius: 16px !important;
 }

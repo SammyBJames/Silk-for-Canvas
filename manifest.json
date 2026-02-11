@@ -31,6 +31,7 @@
         "scripts/colors.js",
         "scripts/todo.js"
       ],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
@@ -40,12 +41,14 @@
         "scripts/navigation.js",
         "scripts/favicon.js"
       ],
+      "all_frames": true,
       "run_at": "document_end"
     },
     {
       "matches": ["*://*.instructure.com/"],
       "exclude_matches": ["*://www.instructure.com/"],
       "css": ["styles/dashboard.css"],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
@@ -54,16 +57,19 @@
         "*://*.instructure.com/grades"
       ],
       "css": ["styles/course.css"],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
       "matches": ["*://*.instructure.com/courses/*"],
       "js": ["scripts/course.js"],
+      "all_frames": true,
       "run_at": "document_end"
     },
     {
       "matches": ["*://*.instructure.com/courses/*/assignments/*"],
       "css": ["styles/assignment.css"],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
@@ -72,16 +78,25 @@
         "*://*.instructure.com/courses/*/discussion_topics/*"
       ],
       "css": ["styles/discussion.css"],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
       "matches": ["*://*.instructure.com/courses/*/quizzes/*"],
       "css": ["styles/quiz.css"],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://canvadocs.instructure.com/1/sessions/*"],
+      "css": ["styles/files.css"],
+      "all_frames": true,
       "run_at": "document_start"
     },
     {
       "matches": ["*://*.instructure.com/conversations"],
       "css": ["styles/inbox.css"],
+      "all_frames": true,
       "run_at": "document_start"
     }
   ],

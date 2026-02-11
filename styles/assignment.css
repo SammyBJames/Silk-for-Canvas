@@ -42,3 +42,24 @@ button:has(.submission-type-icon-contents):focus {
     border: 3px solid transparent !important;
     background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
 }
+
+/* Remove top border and round corners for submission boxes */
+div[data-testid="assignment-2-student-content-tabs"] div[data-testid="attempt-tab"] > div {
+    border: none !important;
+    border-radius: 16px !important;
+}
+
+/* Remove left border for submission boxes */
+div[data-testid="assignment-2-student-content-tabs"] div[data-testid="attempt-tab"] > div > span > span > div {
+    border: none !important;
+}
+
+/* Set no max-width for file previews */
+div[data-testid="assignments_2_submission_preview"] {
+    max-width: none !important;
+}
+
+/* Round file preview iframe */
+div[data-testid="assignments_2_submission_preview"] iframe {
+    border-radius: 16px !important;
+}

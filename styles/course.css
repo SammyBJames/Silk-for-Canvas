@@ -13,35 +13,6 @@
     display: none;
 }
 
-/* Fix alignment of menu icon and breadcrumbs */
-#courseMenuToggle {
-    margin-bottom: 6px !important;
-    box-shadow: none !important;
-}
-
-/* Prevent unnecessary breadcrumb wrapping */
-#breadcrumbs > ul {
-    display: flex !important;
-}
-
-/* Fix alignment on breadcrumbs */
-#breadcrumbs > ul > li {
-    display: flex !important;
-    align-items: center !important;
-}
-
-/* Allow longer breadcrumbs */
-#breadcrumbs .ellipsible, #breadcrumbs .ellipsis {
-    font-size: 24px !important;
-    font-weight: 700 !important;
-    max-width: 300px !important;
-}
-
-/* Allow last breadcrumb to be as large as the content */
-#breadcrumbs li:last-child, #breadcrumbs li:last-child .ellipsible {
-    max-width: unset !important;
-}
-
 /* Gradient breadcrumbs underline */
 .ic-app-nav-toggle-and-crumbs {
     border-radius: 4px !important;
@@ -69,7 +40,7 @@
 
 /* Fix border on last module color highlight */
 /* TODO Look for a cleaner way to do that */
-.context_module_item:last-of-type .ig-row::before {
+.context_module_item:last-of-type .ig-row::before, .assignment:last-of-type .ig-row::before {
     height: calc(100% - 5px) !important;
     border-bottom-left-radius: 100% 25% !important;
 }
