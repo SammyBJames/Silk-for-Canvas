@@ -64,20 +64,20 @@ div[data-testid="assignments_2_submission_preview"] iframe {
     border-radius: 16px !important;
 }
 
-/* TODO: Need to fix colors, rounding, and top border */
+/* TODO: Need to fix rounding and top border */
 
 /* Round corners of tables */
 table {
     border-collapse: separate !important;
     border-radius: 16px !important;
     overflow: hidden !important;
-    border: 1px solid black !important;
+    border: 1px solid #e8eaec !important;
 }
 
 /* Fix double borders */
 table td, table th {
-    border-top: 1px solid !important;
-    border-left: 1px solid !important;
+    border-top: 1px solid #e8eaec !important;
+    border-left: 1px solid #e8eaec !important;
     border-bottom: none !important;
     border-right: none !important;
 }
