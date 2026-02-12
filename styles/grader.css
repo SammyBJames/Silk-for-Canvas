@@ -1,0 +1,5 @@
+#gradebook_header {
+    color: var(--foreground-color) !important;
+    border-bottom: 5px solid transparent !important;
+    background: var(--background-gradient) padding-box, var(--silk-gradient) border-box !important;
+}

@@ -4,7 +4,6 @@
 1. Allow adding/changing pictures on dashboard cards
 1. Allow using picture as dashboard background
 1. Allow adding global menu items
-1. Fix rounding on tables for rubrics
 
 Current theme:
 Accent: #1F6199
