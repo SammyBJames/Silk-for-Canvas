@@ -1,4 +1,7 @@
 async function addSilkLogo() {
+    const menu = document.getElementById('menu');
+    if (!menu) return; // Skip pages without menu
+
     // Don't create if already exists (extension reload)
     if (document.getElementById('silk-dashboard-link') != null) return;
     
@@ -26,14 +29,13 @@ async function addSilkLogo() {
     link.appendChild(tooltip.querySelector('.menu-item__text').cloneNode(true));
 
     // Append to menu
-    const menu = document.getElementById('menu');
     menu.insertBefore(menuItem, menu.firstChild);
 }
 
 function collapseNav() {
     const navToggle = document.getElementById('primaryNavToggle');
     // Have to wait to collapse as event listener is added via scripts
-    if (navToggle.ariaLabel === 'Minimize global navigation') setTimeout(() => navToggle.click(), 3000);
+    if (navToggle?.ariaLabel === 'Minimize global navigation') setTimeout(() => navToggle.click(), 3000);
 }
 
 function updateAvailableNav() {
@@ -55,9 +57,11 @@ async function hideNav() {
         if (settings.includes(el.textContent.trim())) el.style.display = 'none';
     });
 
-    document.getElementById('silk-dashboard-link').style.display = (settings.includes('Silk (Dashboard)')) ? 'none' : 'list-item';
+    const menu = document.getElementById('menu');
+    if (!menu) return; // Skip pages without menu
 
-    document.getElementById('menu').style.display = 'flex';
+    document.getElementById('silk-dashboard-link').style.display = (settings.includes('Silk (Dashboard)')) ? 'none' : 'list-item';
+    menu.style.display = 'flex';
 }
 
 collapseNav();

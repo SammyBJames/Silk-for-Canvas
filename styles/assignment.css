@@ -29,12 +29,6 @@ button:has(.submission-type-icon-contents):focus {
     color: var(--accent-color) !important;
 }
 
-/* Style rubric title */
-.rubric_container .rubric_title {
-    border-top-left-radius: 12px !important;
-    border-top-right-radius: 12px !important;
-}
-
 /* Style submit and new attempt buttons as primary */
 #submit-button > span,
 *[data-testid="new-attempt-button"] > span {
@@ -64,32 +58,42 @@ div[data-testid="assignments_2_submission_preview"] iframe {
     border-radius: 16px !important;
 }
 
-/* TODO: Need to fix rounding and top border */
+/* Style rubric title */
+.rubric_container .rubric_title {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
 
-/* Round corners of tables */
-table {
+/* Style rubric footer */
+.rubric-footer {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+/* Round corners of rubrics */
+div.react-rubric > table {
     border-collapse: separate !important;
-    border-radius: 16px !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
     border: 1px solid #e8eaec !important;
 }
 
-/* Fix double borders */
-table td, table th {
+/* Fix double borders on rubric tables */
+div.react-rubric > table td, div.react-rubric > table th {
     border-top: 1px solid #e8eaec !important;
     border-left: 1px solid #e8eaec !important;
     border-bottom: none !important;
     border-right: none !important;
 }
 
-/* Remove top border from the very first row's cells */
-table > :first-child > tr:first-child > th,
-table > :first-child > tr:first-child > td {
+/* Remove top border from the first row */
+div.react-rubric > table > thead:first-of-type > tr:nth-of-type(2) > th {
+/* div.react-rubric > table > thead:first-of-type > tr: > th { */
     border-top: none !important;
 }
 
-/* Remove left border from the very first column */
-table tr > th:first-child,
-table tr > td:first-child {
+/* Remove left border from the first column */
+div.react-rubric > table tr > th:first-child,
+div.react-rubric > table tr > td:first-child {
     border-left: none !important;
 }
