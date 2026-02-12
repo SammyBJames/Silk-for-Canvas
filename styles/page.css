@@ -359,6 +359,21 @@ span[class$="-mask"]:has(> .ef-file-preview-overlay) {
 }
 
 /* Round corners of file previews */
-div.preview_container iframe {
+div.preview_container iframe, #doc_preview iframe {
     border-radius: 16px !important;
+}
+
+/* Round text areas */
+.tox-edit-area {
+    border-radius: 16px !important;
+}
+
+/* Round text areas */
+.tox-edit-area iframe {
+    border-radius: 15px !important;
+}
+
+/* Change border color on active text areas */
+.tox-edit-area.active {
+    border-color: var(--accent-color) !important;
 }
