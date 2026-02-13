@@ -1,0 +1,58 @@
+/* Remove white background for table iframe to remove box */
+.file-upload-submission-table {
+    background-color: transparent !important;
+    border-collapse: separate !important;
+    border-spacing: 0 10px !important;
+}
+
+/* Style table cells to be larger */
+.file-upload-submission-table tbody tr.file-upload-submission td {
+    background-color: white !important;
+    padding: 20px !important;
+}
+
+/* Add a drop shadow to the row and remove background */
+.file-upload-submission-table tbody tr.file-upload-submission {
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Round the corners of the first cell */
+.file-upload-submission-table tbody tr.file-upload-submission td:first-child {
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+}
+
+/* Round the corners of the last cell */
+.file-upload-submission-table tbody tr.file-upload-submission td:last-child {
+    border-top-right-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+/* Change the font size and fix the spacing for the filename */
+.file-upload-submission-table tbody td.file-upload-submission-info > a {
+    font-size: 16px !important;
+    padding-left: 24px !important;
+}
+
+/* Round submission details box */
+.submission-details-container {
+    border-radius: 16px !important;
+}
+
+/* Round submission details frame */
+.submission-details-frame > iframe#preview_frame {
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+}
+
+/* Round submission details comments */
+.submission-details-comments, .submission-details-comments > div, .submission-details-comments div.comments {
+    border-top-right-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+.submission-details-comments div.comments {
+    background-color: white !important;
+}

@@ -165,3 +165,9 @@ span[data-testid="grade-display"] {
 #student-grades-right-content > .final_grade:not(:has(span.letter_grade)) > .grade {
     font-size: 36px !important;
 }
+
+/* Fix alignment in assignment pill */
+.ag-header-controls > .pill {
+    display: flex !important;
+    align-items: center !important;
+}
