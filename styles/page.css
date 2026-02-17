@@ -317,7 +317,7 @@ span[class$="-closeButton"] > button::before {
 }
 
 /* Style flash notifications */
-.ic-flash-success, .flashalert-message > div {
+.ic-flash-success, .flashalert-message > div, div.flash-message-container {
     background-color: white !important;
     border-radius: 16px !important;
 }
